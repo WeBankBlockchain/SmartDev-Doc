@@ -50,6 +50,6 @@
 通过git下载源码：
 
 ```
-git clone XXX
+git clone git@github.com:WeBankBlockchain/Toolkit-Contract.git
 ```
 
