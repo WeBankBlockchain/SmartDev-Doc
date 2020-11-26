@@ -18,13 +18,13 @@
 下载代码：
 
 ```
-git clone XXX
+git clone git@github.com:WeBankBlockchain/Toolkit-SCGP.git
 ```
 
-安装代码：
+安装插件：
 
 ```
-cd XXX
+cd Toolkit-SCGP
 gradle install
 ```
 
