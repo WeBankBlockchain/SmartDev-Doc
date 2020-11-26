@@ -19,7 +19,6 @@ WeBankBlockchain-Toolkit 技术文档
     **Solidity Compilation Plugin 智能合约编译插件** 
     一个gradle插件，可以将项目中的智能合约转换为java代码，并拷贝到对应包目录下。请参考`文档 <./docs/WeBankBlockchain-Toolkit-Solidity-Plugin/index.html>`_ 
     
-   
 .. toctree::
    :maxdepth: 3
 
