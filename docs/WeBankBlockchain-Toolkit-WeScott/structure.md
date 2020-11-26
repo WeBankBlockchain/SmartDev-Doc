@@ -1,17 +1,17 @@
-# 整体结构
+# 1. 整体结构
 
 智能合约库涵盖了从基础类型到上层业务的常见代码，用户可根据实际需要进行参考、复用。智能合约库的结构如下：
 ![](./picture/wescott.png)
 
 ## 1.1. 基础类型层
 
-| 库 | 功能 | 说明 |
-| --- | --- | --- |
-|LibSafeMathForUint256Utils|数学运算|加减乘除、幂、最大值最小值、平均值等|
-|LibConverter|整型转换操作|和各数据类型之间的转换等|
-|LibString|字符串操作|取长度、判断起始终止、查找子父、求子串、拼接、比较、大小写转换等|
-|LibAddress|地址操作|和各数据类型之间的转换；合约地址判断等|
-|LibArrayForUint256Utils|数组操作|排序、查找、去重、拼接等|
+| 库 | 功能 | 说明 | API |
+| --- | --- | --- | --- |
+|LibSafeMathForUint256Utils|数学运算|加减乘除、幂、最大值最小值、平均值等| [LibSafeMathForUint256Utils](./api/types/LibSafeMathForUint256Utils.md) |
+|LibConverter|整型转换操作|和各数据类型之间的转换等| ![LibConverter](./api/types/LibConverter.md)|
+|LibString|字符串操作|取长度、判断起始终止、查找子父、求子串、拼接、比较、大小写转换等| |
+|LibAddress|地址操作|和各数据类型之间的转换；合约地址判断等| |
+|LibArrayForUint256Utils|数组操作|排序、查找、去重、拼接等| |
 
 ## 1.2. 数据结构层
 
