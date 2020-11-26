@@ -1,19 +1,21 @@
-# 1. 整体结构
+# 组件介绍
+
+## 1. 整体结构
 
 智能合约库涵盖了从基础类型到上层业务的常见代码，用户可根据实际需要进行参考、复用。智能合约库的结构如下：
 ![](./picture/wescott.png)
 
-## 1.1. 基础类型层
+### 1.1. 基础类型层
 
 | 库 | 功能 | 说明 | API |
 | --- | --- | --- | --- |
-|LibSafeMathForUint256Utils|数学运算|加减乘除、幂、最大值最小值、平均值等| [LibSafeMathForUint256Utils](./api/types/LibSafeMathForUint256Utils.md) |
-|LibConverter|整型转换操作|和各数据类型之间的转换等| ![LibConverter](./api/types/LibConverter.md)|
-|LibString|字符串操作|取长度、判断起始终止、查找子父、求子串、拼接、比较、大小写转换等| |
-|LibAddress|地址操作|和各数据类型之间的转换；合约地址判断等| |
-|LibArrayForUint256Utils|数组操作|排序、查找、去重、拼接等| |
+|LibSafeMathForUint256Utils|数学运算|加减乘除、幂、最大值最小值、平均值等| [API](./api/types/LibSafeMathForUint256Utils.md) |
+|LibConverter|整型转换操作|和各数据类型之间的转换等| [API](./api/types/LibConverter.md)|
+|LibString|字符串操作|取长度、判断起始终止、查找子父、求子串、拼接、比较、大小写转换等|[API](./api/types/LibString.md) |
+|LibAddress|地址操作|和各数据类型之间的转换；合约地址判断等|[API](./api/types/LibAddress.md)|
+|LibArrayForUint256Utils|数组操作|排序、查找、去重、拼接等|[API](./api/types/LibArrayForUint256Utils.md) |
 
-## 1.2. 数据结构层
+### 1.2. 数据结构层
 
 | 库 | 功能 | 说明 |
 | --- | --- | --- |
@@ -24,14 +26,14 @@
 |LibBytesMap|映射|映射操作，存、取、移除等|
 |LibLinkedList|链表|链表相关操作。支持双向链表|
 
-## 1.3. 通用功能层
+### 1.3. 通用功能层
 | 库 | 功能 | 说明 |
 | --- | --- | --- |
 |AccountManager|账户治理|提供外部账户和内部账户的映射，可用于私钥找回等场景|
 |AuthManager|权限治理|提供基于组的权限管控方案|
 |LibVote|投票|提供投票逻辑，包括多签投票、阈值投票等|
 
-## 1.4. 上层业务层
+### 1.4. 上层业务层
 
 | 库 | 功能 | 说明 |
 | --- | --- | --- |
@@ -39,4 +41,11 @@
 |RewardPoint|积分|积分场景相关操作，发行、转移等|
 
 
+## 2. 如何使用
+
+通过git下载源码：
+
+```
+git clone XXX
+```
 

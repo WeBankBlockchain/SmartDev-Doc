@@ -20,7 +20,5 @@
 .. toctree::
    :maxdepth: 3
    
-   structure.md
-   howtouse.md
-   api.md
+   intro.md
 ```
