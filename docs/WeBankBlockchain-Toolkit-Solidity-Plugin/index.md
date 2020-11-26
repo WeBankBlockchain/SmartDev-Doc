@@ -1,32 +1,25 @@
-##############################################################
-WeBankBlockchain-Toolkit 技术文档
-##############################################################
+# 智能合约工具库
 
-.. admonition:: 什么是 WeBankBlockchain-Toolkit 
+[![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
+
+```eval_rst
+.. admonition:: **简介**
 
     对于区块链开发者，在智能合约开发中，经常会遇到各种问题，比如如何将账户地址和字符串互转，如何通过智能合约实现数据结构或者是否有一些可复用的智能合约代码？由于智能合约开发是一个相对较新的领域，在开发过程中，如果没有一套可参考的模板和代码库，不仅会影响了开发的效率，同时可能因为对智能合约开发的不熟悉造成系统安全风险。另一方面，智能合约如果需要编译，首先需要安装控制台，然后在调试阶段，需要把合约导入控制台，编译后再把java合约拷贝出来调试，只要合约有变更，此流程就需要重新跑一边，非常的繁琐，严重影响开发效率。基于上述问题，我们编写了一套智能合约工具库，在减少合约漏洞的同时，提升智能合约的开发效率。目前，我们提供了智能合约库和合约编译插件这两个工具，未来还会提供更多工具。
+```
 
-.. admonition:: 设计目标
+```eval_rst
+.. admonition:: **包含工具**
 
     - 提供智能合约库，覆盖基础类型到上层业务
     - 合约编译插件，一键式编译智能合约
-
-.. admonition:: 组件简介
-
-    - **WeScott  智能合约开源模板工具库** 
-    包含基础类型、数据结构、通用功能、上层业务的solidity代码模板。 请参考`文档 <./docs/WeBankBlockchain-Toolkit-WeScott/index.html>`_
-    
-    - **Solidity Compilation Plugin 智能合约编译插件** 
-    一个gradle插件，可以将项目中的智能合约转换为java代码，并拷贝到对应包目录下。请参考`文档 <./docs/WeBankBlockchain-Toolkit-Solidity-Plugin/index.html>`_ 
-    
-   
+    - ...
+```
+```eval_rst
 .. toctree::
    :maxdepth: 3
-
-   ./docs/WeBankBlockchain-Toolkit-WeScott/index.md
-   ./docs/WeBankBlockchain-Toolkit-Solidity-Plugin/index.md
-.. 
-
-
- 
- 
+   
+   wescott.md
+   compileplugin.md
+   appendix.md
+```
