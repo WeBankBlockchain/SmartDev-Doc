@@ -13,10 +13,10 @@ WeBankBlockchain-Toolkit 技术文档
 
 .. admonition:: 组件简介
 
-    **WeScott  智能合约开源模板工具库** 
+    - **WeScott  智能合约开源模板工具库** 
     包含基础类型、数据结构、通用功能、上层业务的solidity代码模板。 请参考`文档 <./docs/WeBankBlockchain-Toolkit-WeScott/index.html>`_
     
-    **Solidity Compilation Plugin 智能合约编译插件** 
+    - **Solidity Compilation Plugin 智能合约编译插件** 
     一个gradle插件，可以将项目中的智能合约转换为java代码，并拷贝到对应包目录下。请参考`文档 <./docs/WeBankBlockchain-Toolkit-Solidity-Plugin/index.html>`_ 
     
 .. toctree::
