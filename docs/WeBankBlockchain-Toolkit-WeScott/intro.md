@@ -17,14 +17,17 @@
 
 ### 1.2. 数据结构层
 
-| 库 | 功能 | 说明 |
-| --- | --- | --- |
-|LibMaxHeapUint256\LibMinHeapUint256|堆|堆相关操作，取最值、插入、删除等。支持最大堆、最小堆|
-|LibStack|栈|提供栈相关操作，如进栈、出栈等|
-|LibQueue\LibDequeu|队列|队列相关操作，入队、出队等。支持单向队列、双向队列|
-|LibBytes32Set\LibAddressSet|集合|集合操作，增删改查等|
-|LibBytesMap|映射|映射操作，存、取、移除等|
-|LibLinkedList|链表|链表相关操作。支持双向链表|
+| 库 | 功能 | 说明 | API |
+| --- | --- | --- | --- |
+|LibMaxHeapUint256|堆|最大堆相关操作，取最值、插入、删除等| [API](./api/types/LibMaxHeapUint256.md)|
+|LibMinHeapUint256|堆|最小堆相关操作，取最值、插入、删除等| [API](./api/types/LibMinHeapUint256.md)|
+|LibStack|栈|提供栈相关操作，如进栈、出栈等|[API](./api/types/LibStack.md) |
+|LibQueue|队列|单向队列相关操作，入队、出队等|[API](./api/types/LibQueue.md|
+|LibDequeu|队列|双向队列相关操作，入队、出队等|[API](./api/types/LibDequeue.md|
+|LibBytes32Set|bytes32类型集合|集合操作，增删改查等| [API](./api/types/LibBytes32Set.md|
+|LibAddressSet|address类型集合|集合操作，增删改查等| [API](./api/types/LibAddressSet.md|
+|LibBytesMap|映射|映射操作，存、取、移除等|[API](./api/types/LibBytesMap.md|
+|LibLinkedList|双向链表|链表相关操作|[API](./api/types/LibLinkedList.md|
 
 ### 1.3. 通用功能层
 | 库 | 功能 | 说明 |
