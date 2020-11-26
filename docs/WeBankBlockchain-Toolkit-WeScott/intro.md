@@ -24,7 +24,7 @@
 |LibMinHeapUint256|堆|最小堆相关操作，取最值、插入、删除等| [API](./api/data_structures/LibMinHeapUint256.html)|
 |LibStack|栈|提供栈相关操作，如进栈、出栈等|[API](./api/data_structures/LibStack.html) |
 |LibQueue|队列|单向队列相关操作，入队、出队等|[API](./api/data_structures/LibQueue.html)|
-|LibDequeu|队列|双向队列相关操作，入队、出队等|[API](./api/data_structures/LibDequeue.html)|
+|LibDeque|队列|双向队列相关操作，入队、出队等|[API](./api/data_structures/LibDeque.html)|
 |LibBytes32Set|bytes32类型集合|集合操作，增删改查等| [API](./api/data_structures/LibBytes32Set.html)|
 |LibAddressSet|address类型集合|集合操作，增删改查等| [API](./api/data_structures/LibAddressSet.html)|
 |LibBytesMap|映射|映射操作，存、取、移除等|[API](./api/data_structures/LibBytesMap.html)|
