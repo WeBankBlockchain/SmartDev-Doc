@@ -19,7 +19,7 @@
 .. toctree::
    :maxdepth: 3
    
-   wescott.md
-   compileplugin.md
-   appendix.md
+   structure.md
+   howtouse.md
+   api.md
 ```
