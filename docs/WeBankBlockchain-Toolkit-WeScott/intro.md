@@ -19,29 +19,29 @@
 
 | 库 | 功能 | 说明 | API |
 | --- | --- | --- | --- |
-|LibMaxHeapUint256|堆|最大堆相关操作，取最值、插入、删除等| [API](./api/types/LibMaxHeapUint256.md)|
-|LibMinHeapUint256|堆|最小堆相关操作，取最值、插入、删除等| [API](./api/types/LibMinHeapUint256.md)|
-|LibStack|栈|提供栈相关操作，如进栈、出栈等|[API](./api/types/LibStack.md) |
-|LibQueue|队列|单向队列相关操作，入队、出队等|[API](./api/types/LibQueue.md|
-|LibDequeu|队列|双向队列相关操作，入队、出队等|[API](./api/types/LibDequeue.md|
-|LibBytes32Set|bytes32类型集合|集合操作，增删改查等| [API](./api/types/LibBytes32Set.md|
-|LibAddressSet|address类型集合|集合操作，增删改查等| [API](./api/types/LibAddressSet.md|
-|LibBytesMap|映射|映射操作，存、取、移除等|[API](./api/types/LibBytesMap.md|
-|LibLinkedList|双向链表|链表相关操作|[API](./api/types/LibLinkedList.md|
+|LibMaxHeapUint256|堆|最大堆相关操作，取最值、插入、删除等| [API](./api/data_structures/LibMaxHeapUint256.md)|
+|LibMinHeapUint256|堆|最小堆相关操作，取最值、插入、删除等| [API](./api/data_structures/LibMinHeapUint256.md)|
+|LibStack|栈|提供栈相关操作，如进栈、出栈等|[API](./api/data_structures/LibStack.md) |
+|LibQueue|队列|单向队列相关操作，入队、出队等|[API](./api/data_structures/LibQueue.md|
+|LibDequeu|队列|双向队列相关操作，入队、出队等|[API](./api/data_structures/LibDequeue.md|
+|LibBytes32Set|bytes32类型集合|集合操作，增删改查等| [API](./api/data_structures/LibBytes32Set.md|
+|LibAddressSet|address类型集合|集合操作，增删改查等| [API](./api/data_structures/LibAddressSet.md|
+|LibBytesMap|映射|映射操作，存、取、移除等|[API](./api/data_structures/LibBytesMap.md|
+|LibLinkedList|双向链表|链表相关操作|[API](./api/data_structures/LibLinkedList.md|
 
 ### 1.3. 通用功能层
-| 库 | 功能 | 说明 |
-| --- | --- | --- |
-|AccountManager|账户治理|提供外部账户和内部账户的映射，可用于私钥找回等场景|
-|AuthManager|权限治理|提供基于组的权限管控方案|
-|LibVote|投票|提供投票逻辑，包括多签投票、阈值投票等|
+| 库 | 功能 | 说明 | API |
+| --- | --- | --- | --- |
+|AccountManager|账户治理|提供外部账户和内部账户的映射，可用于私钥找回等场景| |
+|AuthManager|权限治理|提供基于组的权限管控方案||
+|LibVote|投票|提供投票逻辑，包括多签投票、阈值投票等||
 
 ### 1.4. 上层业务层
 
-| 库 | 功能 | 说明 |
-| --- | --- | --- |
-|Evidence|存证|存证场景相关操作，上传、审批、修改、删除等|
-|RewardPoint|积分|积分场景相关操作，发行、转移等|
+| 库 | 功能 | 说明 | API |
+| --- | --- | --- | --- |
+|Evidence|存证|存证场景相关操作，上传、审批、修改、删除等|[API](./api/biz_templates/Evidence.md|
+|RewardPoint|积分|积分场景相关操作，发行、转移等|[API](./api/biz_templates/RewardPoint.md|
 
 
 ## 2. 如何使用
