@@ -28,6 +28,8 @@ cd Toolkit-SCGP
 gradle install
 ```
 
+出现类似下面字样即为成功：
+[](picture/success.png)
 
 ### 2.2. 创建业务工程
 
