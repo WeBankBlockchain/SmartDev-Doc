@@ -31,12 +31,11 @@
 |LibLinkedList|双向链表|链表相关操作|[API](./api/data_structures/LibLinkedList.html)|
 
 ### 1.3. 通用功能层
+
 | 库 | 功能 | 说明 | API |
 | --- | --- | --- | --- |
-|AccountManager|账户治理|提供外部账户和内部账户的映射，可用于私钥找回等场景| - |
-|AuthManager|权限治理|提供基于组的权限管控方案| - |
-|LibVote|投票|提供投票逻辑，包括多签投票、阈值投票等| -|
-
+|Table|CRUD合约|提供CRUD体验| [CRUD](https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/articles/3_features/33_storage/crud_guidance.html)|
+|Crypto|密码学|国密哈希、验签、VRF等| -|
 ### 1.4. 上层业务层
 
 | 库 | 功能 | 说明 | API |
