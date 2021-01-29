@@ -20,15 +20,15 @@
 
 | 库 | 功能 | 说明 | API |
 | --- | --- | --- | --- |
-|LibMaxHeapUint256|堆|最大堆相关操作，取最值、插入、删除等| [API](./api/data_structures/LibMaxHeapUint256.html)|
-|LibMinHeapUint256|堆|最小堆相关操作，取最值、插入、删除等| [API](./api/data_structures/LibMinHeapUint256.html)|
-|LibStack|栈|提供栈相关操作，如进栈、出栈等|[API](./api/data_structures/LibStack.html) |
-|LibQueue|队列|单向队列相关操作，入队、出队等|[API](./api/data_structures/LibQueue.html)|
-|LibDeque|队列|双向队列相关操作，入队、出队等|[API](./api/data_structures/LibDeque.html)|
-|LibBytes32Set|bytes32类型集合|集合操作，增删改查等| [API](./api/data_structures/LibBytes32Set.html)|
-|LibAddressSet|address类型集合|集合操作，增删改查等| [API](./api/data_structures/LibAddressSet.html)|
-|LibBytesMap|映射|映射操作，存、取、移除等|[API](./api/data_structures/LibBytesMap.html)|
-|LibLinkedList|双向链表|链表相关操作|[API](./api/data_structures/LibLinkedList.html)|
+|LibMaxHeapUint256|堆|最大堆相关操作，取最值、插入、删除等| [API](./api/data_structure/LibMaxHeapUint256.html)|
+|LibMinHeapUint256|堆|最小堆相关操作，取最值、插入、删除等| [API](./api/data_structure/LibMinHeapUint256.html)|
+|LibStack|栈|提供栈相关操作，如进栈、出栈等|[API](./api/data_structure/LibStack.html) |
+|LibQueue|队列|单向队列相关操作，入队、出队等|[API](./api/data_structure/LibQueue.html)|
+|LibDeque|队列|双向队列相关操作，入队、出队等|[API](./api/data_structure/LibDeque.html)|
+|LibBytes32Set|bytes32类型集合|集合操作，增删改查等| [API](./api/data_structure/LibBytes32Set.html)|
+|LibAddressSet|address类型集合|集合操作，增删改查等| [API](./api/data_structure/LibAddressSet.html)|
+|LibBytesMap|映射|映射操作，存、取、移除等|[API](./api/data_structure/LibBytesMap.html)|
+|LibLinkedList|双向链表|链表相关操作|[API](./api/data_structure/LibLinkedList.html)|
 
 ### 1.3. 通用功能层
 
@@ -41,8 +41,8 @@
 
 | 库 | 功能 | 说明 | API |
 | --- | --- | --- | --- |
-|Evidence|存证|存证场景相关操作，上传、审批、修改、删除等|[API](./api/biz_templates/Evidence.html)|
-|RewardPoint|积分|积分场景相关操作，发行、转移等|[API](./api/biz_templates/RewardPoint.html)|
+|Evidence|存证|存证场景相关操作，上传、审批、修改、删除等|[API](./api/business_template/Evidence.html)|
+|RewardPoint|积分|积分场景相关操作，发行、转移等|[API](./api/business_template/RewardPoint.html)|
 
 
 ## 2. 如何使用
