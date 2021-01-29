@@ -35,7 +35,8 @@
 | 库 | 功能 | 说明 | API |
 | --- | --- | --- | --- |
 |Table|CRUD合约|提供CRUD体验| [CRUD](https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/articles/3_features/33_storage/crud_guidance.html)|
-|Crypto|密码学|国密哈希、验签、VRF等| -|
+|Crypto|密码学|国密哈希、验签、VRF等| [API](./api/default/Crypto.html)|
+
 ### 1.4. 上层业务层
 
 | 库 | 功能 | 说明 | API |
