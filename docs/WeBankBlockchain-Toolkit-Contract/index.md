@@ -21,4 +21,5 @@
    :maxdepth: 3
    
    intro.md
+   faq.md
 ```
