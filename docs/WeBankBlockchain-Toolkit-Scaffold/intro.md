@@ -72,7 +72,7 @@ cd [demo directory]
 gradle test
 ```
 
-### 合约更新
+### 后续合约开发
 
 当用户基于生成的项目进行开发时，若需要修改合约，用户在修改完合约后，可在项目工程目录下直接编译合约：
 ```
@@ -81,3 +81,22 @@ gradle solc
 ```
 
 新的java合约及abi、bin会被刷新到目录下。
+
+### 后续项目开发
+
+用户可调用生成的Service类，例如：
+
+```
+    @Test
+    public void demo() throws Exception {
+
+        BcosSDK bcosSDK = BcosSDK.build("conf/config.toml");
+        Client client = bcosSDK.getClient(1);
+
+        String contractAddress = "0x...";
+        EvidenceControllerService service
+                = new EvidenceControllerService(contractAddress, client);
+        TransactionResponse response = service.voteSaveRequest(new EvidenceControllerVoteSaveRequestInputBO(new byte[]{1,2,3}));
+
+    }
+```
