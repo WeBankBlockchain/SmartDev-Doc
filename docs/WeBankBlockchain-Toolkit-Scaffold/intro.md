@@ -32,7 +32,7 @@ cd SmartDev-Scaffold
 cp -r [solidity folder]/* contracts
 ```
 
-将配置文件拷贝到SmartDev-Scaffold的conf目录下。conf包含证书和配置信息，更多请见![说明](https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/sdk/java_sdk/configuration.html)
+将配置文件拷贝到SmartDev-Scaffold的conf目录下。conf包含证书和配置信息，更多请见[说明](https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/sdk/java_sdk/configuration.html)
 ```
 cp -r [conf]/* conf
 ```
