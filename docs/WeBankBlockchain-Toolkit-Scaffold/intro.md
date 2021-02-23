@@ -18,51 +18,40 @@
 ## 快速开始
 目前支持基于命令行的方式，后续会推出基于可视化的使用方式，进一步降低用户使用的难度。
 
-### 合约准备
-用户需要提前准备如下信息：
-
-| 材料 |  说明|
-| --- | --- |
-|智能合约|智能合约solidity文件|
-|证书|用于连接区块链的证书，用户可从节点sdk目录 或 控制台的conf目录获取|
-
 
 ### 源码下载
 ```
-cd ~
 git clone https://github.com/WeBankBlockchain/SmartDev-Scaffold.git
-cd SmartDev-Scaffold/scaffold-cmd 
+cd SmartDev-Scaffold
+```
+
+### 拷贝合约代码和配置文件
+
+将solidity文件拷贝到SmartDev-Scaffold的contracts目录下
+```
+cp -r [solidity folder]/* contracts
+```
+
+将配置文件拷贝到SmartDev-Scaffold的conf目录下。conf包含证书和配置信息，更多请见![说明](https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/sdk/java_sdk/configuration.html)
+```
+cp -r [conf]/* conf
 ```
 ### 运行脚手架
 
 ```
-gradle build
-cd dist
-java -jar scaffold-cmd.jar -p [peers] -s [solidity directory] -c [cert directory] -o [output directory]
+chmod +x run.sh
+bash run.sh
 ```
 
-配置说明如下：
-| 配置 |  说明|可选| 
-| --- | --- | --- |
-|-p|连接节点，若多个节点用逗号分隔，例如127.0.0.1:20200,127.0.0.1:20201||
-|-s|智能合约solidity文件的目录||
-|-c|配置目录，包含证书||
-|-o|输出目录，新的项目会在这个目录下被创建。如果同名项目已经存在，则会报错||
-|-f|合约过滤通配符，用于选择合约，例如"*Controller"，则只会读取Controller结尾的合约。默认选择所有合约|可选|
+用户可以指定group名和项目名，例如
+```
+bash run.sh com.webank demo
+```
 
-您也可以使用help命令获取说明：
-```
-Usage: ScaffoldRunner -c=<certDir> [-f=<filter>] -o=<output> -p=<peers>
-                      -s=<solidityDir>
-  -c, --cert=<certDir>      Ca cert directory
-  -f, --filter=<filter>     Contract filter, you can use wild char
-  -o, --output=<output>     Output directory
-  -p, --peers=<peers>       Peers to connect, split by comma
-  -s, --sol=<solidityDir>   Solidity contracts dir
-```
+如果用户不指定，则默认group采用org.example, 项目名采用demo。输出物的包名将结合gorup和项目名。
 
 ### 生成效果
-运行成功后，可在artifact目录下得到项目工程，如下示例：
+运行成功后，可在artifacts目录下得到项目工程，如下示例：
 
 ![](image/Sample.png)
 
