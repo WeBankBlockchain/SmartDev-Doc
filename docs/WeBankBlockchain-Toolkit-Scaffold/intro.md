@@ -49,7 +49,7 @@ bash run.sh
 bash run.sh com.webank demo
 ```
 
-如果用户不指定，则默认group采用org.example, 项目名采用demo。输出物的包名将结合gorup和项目名。
+如果用户不指定，则默认group采用org.example, 项目名采用demo。输出物的包名将结合group和项目名。
 
 ### 生成效果
 运行成功后，可在artifacts目录下得到项目工程，如下示例：
