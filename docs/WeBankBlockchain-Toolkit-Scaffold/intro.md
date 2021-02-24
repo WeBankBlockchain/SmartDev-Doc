@@ -1,6 +1,5 @@
-# 组件介绍
+# 快速开始
 
-## 简介
 智能合约脚手架用于一键式生成DAPP应用开发工程，从而降低应用开发的难度。用户将自己的合约导入脚手架，即可生成对应的应用开发模板工程，包含了java合约、测试代码等。此外，当用户修改了合约时，不必再使用控制台重新编译，而是可通过植入项目的gradle插件进行编译，新编译的java合约会被更新到项目中。
 
 ## 前置依赖
@@ -20,10 +19,21 @@
 目前支持基于命令行的方式，后续会推出基于可视化的使用方式，进一步降低用户使用的难度。
 
 
-### 源码下载
+### 安装脚手架
+可通过源码安装，也可以直接基于release安装。
+#### 通过源码安装
+目前支持从源码安装。
+
 ```
 git clone https://github.com/WeBankBlockchain/SmartDev-Scaffold.git
 cd SmartDev-Scaffold
+```
+
+#### 通过Release安装
+
+```
+curl https://github.com/WeBankBlockchain/SmartDev-Scaffold/release/1.0.0/scaffold.jar
+tar -xvf scaffold.jar .
 ```
 
 ### 拷贝合约代码和配置文件
