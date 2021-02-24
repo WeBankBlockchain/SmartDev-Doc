@@ -15,7 +15,7 @@
 
 ### 创建业务工程
 
-下述业务工程是典型的java dapp项目工程，里面的src/main/contracts里包含了智能合约：
+创建一个空的业务工程，里面的src/main/contracts里包含了智能合约：
 
 ![](picture/demo.png)
 
@@ -33,7 +33,7 @@ buildscript {
         mavenLocal()
     }
     dependencies {
-        classpath 'com.webank:solc-gradle-plugin:1.0-SNAPSHOT'
+        classpath 'com.webank:solc-gradle-plugin:1.0.0-SNAPSHOT'
     }
 }
 
@@ -68,7 +68,7 @@ gradle solc
 
 - abi：编译生成的abi
 - bin：二进制文件
-- smbin：国米版二进制文件
+- smbin：国密版二进制文件
 - java：java合约
 
 ## 详细配置
