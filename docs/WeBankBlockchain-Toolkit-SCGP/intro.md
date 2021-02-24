@@ -67,8 +67,7 @@ gradle solc
 ![](picture/result.png)
 
 - abi：编译生成的abi
-- bin：二进制文件
-- smbin：国密版二进制文件
+- bin：二进制文件,包含国密
 - java：java合约
 
 ## 详细配置
