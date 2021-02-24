@@ -1,8 +1,15 @@
-# 附录
+# 常见问题
+## solc-gradle-plugin找不到
+如果业务工程中遇到下述错误：
+```
+Plugin id 'solc-gradle-plugin' not found
+```
+可尝试刷新依赖：
+```
+gradle solc --refresh-dependencies
+```
 
-## 从源码安装
-
-目前gradle插件已经存放在maven仓库。如果无法从maven仓库拉取，可从源码安装。
+如果还是失败，可从源码安装。
 
 下载代码：
 

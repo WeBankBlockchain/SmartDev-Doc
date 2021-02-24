@@ -80,6 +80,3 @@ gradle solc
 | contracts | 否 | 智能合约文件相对路径，默认为src/main/contracts |
 | output | 否 | 编译输出的相对路径，默认为src/main |
 
-## 其他说明
-
-编译出来的java合约是基于java sdk的，原版web3sdk无法使用。
