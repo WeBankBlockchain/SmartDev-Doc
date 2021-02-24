@@ -15,6 +15,7 @@
 | Git | 下载安装包需要使用Git | |
 
 
+
 ## 快速开始
 目前支持基于命令行的方式，后续会推出基于可视化的使用方式，进一步降低用户使用的难度。
 
@@ -23,15 +24,13 @@
 ```
 git clone https://github.com/WeBankBlockchain/SmartDev-Scaffold.git
 cd SmartDev-Scaffold
-mkdir contracts
-mkdir conf
 ```
 
 ### 拷贝合约代码和配置文件
 
 将solidity文件拷贝到SmartDev-Scaffold的contracts目录下
 ```
-cp -r [solidity folder]/* contracts
+cp -r [solidity folder]/*.sol contracts
 ```
 
 将配置文件拷贝到SmartDev-Scaffold的conf目录下。conf包含证书和配置信息，更多请见[说明](https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/sdk/java_sdk/configuration.html)
