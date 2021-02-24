@@ -4,40 +4,22 @@
 
 ![](picture/cplugin.png)
 
-## 1. 前置依赖
+## 前置依赖
 
 | 依赖软件 | 说明 |备注|
 | --- | --- | --- |
 | Java | JDK[1.8] | |
 | Git | 下载代码需要使用Git | |
 
-## 2. 快速开始
+## 快速开始
 
-### 2.1. 下载与安装
-
-下载代码：
-
-```
-git clone https://github.com/WeBankBlockchain/Toolkit-SCGP.git
-```
-
-安装插件：
-
-```
-cd Toolkit-SCGP
-gradle install
-```
-
-出现类似下面字样即为成功：
-[](picture/success.png)
-
-### 2.2. 创建业务工程
+### 创建业务工程
 
 下述业务工程是典型的java dapp项目工程，里面的src/main/contracts里包含了智能合约：
 
 ![](picture/demo.png)
 
-### 2.3. 插件配置
+### 插件配置
 
 业务方只需要在build.gradle中引入插件：
 
@@ -68,7 +50,7 @@ solc{
 
 ```
 
-### 2.3. 编译合约
+### 编译合约
 
 进入java工程：
 ```
@@ -89,7 +71,7 @@ gradle solc
 - smbin：国米版二进制文件
 - java：java合约
 
-## 3. 详细配置
+## 详细配置
 
 插件的完整配置如下：
 
@@ -99,6 +81,6 @@ gradle solc
 | contracts | 否 | 智能合约文件相对路径，默认为src/main/contracts |
 | output | 否 | 编译输出的相对路径，默认为src/main |
 
-## 4. 其他说明
+## 其他说明
 
 编译出来的java合约是基于java sdk的，原版web3sdk无法使用。
