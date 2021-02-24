@@ -23,6 +23,8 @@
 ```
 git clone https://github.com/WeBankBlockchain/SmartDev-Scaffold.git
 cd SmartDev-Scaffold
+mkdir contracts
+mkdir conf
 ```
 
 ### 拷贝合约代码和配置文件
