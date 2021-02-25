@@ -20,33 +20,22 @@
 
 
 ### 安装脚手架
-可通过源码安装，也可以直接基于release安装。
-#### 通过源码安装
 目前支持从源码安装。
 
 ```
 git clone https://github.com/WeBankBlockchain/SmartDev-Scaffold.git
-cd SmartDev-Scaffold
+cd SmartDev-Scaffold/tools
 ```
 
-#### 通过Release安装
+tools目录包含了执行环境，其结构为：
+```
+├── tools
+│   ├── contracts
+│   ├──── HelloWorld.sol
+│   ├── run.sh
+```
+其中contracts目录用于存放solidity合约文件，脚手架后续会读取该目录下的合约以生成对应的业务工程。请删除该目录下的默认合约，并将自己的业务合约拷贝到该目录下。
 
-```
-curl https://github.com/WeBankBlockchain/SmartDev-Scaffold/release/1.0.0/scaffold.jar
-tar -xvf scaffold.jar .
-```
-
-### 拷贝合约代码和配置文件
-
-将solidity文件拷贝到SmartDev-Scaffold的contracts目录下
-```
-cp -r [solidity folder]/*.sol contracts
-```
-
-将配置文件拷贝到SmartDev-Scaffold的conf目录下。conf包含证书和配置信息，更多请见[说明](https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/sdk/java_sdk/configuration.html)
-```
-cp -r [conf]/* conf
-```
 ### 运行脚手架
 
 ```
@@ -54,25 +43,31 @@ chmod +x run.sh
 bash run.sh
 ```
 
-用户可以指定group名和项目名，例如
+用户可以指定artifact和group，例如
 ```
-bash run.sh com.webank demo
+bash run.sh myProject com.webank
 ```
 
-如果用户不指定，则默认group采用org.example, 项目名采用demo。输出物的包名将结合group和项目名。
+如果用户不指定，则项目名默认采用demo，group默认采用org.example。
 
 ### 生成效果
-运行成功后，可在artifacts目录下得到项目工程，如下示例：
-
+运行成功后，会在目录下得到一个项目工程项目：
+```
+├─contracts
+├─run.sh
+└─myProject
+```
+其中生成项目的具体内容如下：
 ![](image/Sample.png)
 
-可直接运行新的工程的测试用例，该测试用例会测试和节点的连接性，如未报错即为成功：
-```
-cd [demo directory]
-gradle test
-```
+其中：
+- conf目录包含区块链链接配置。关于配置的信息更多请见[说明](https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/sdk/java_sdk/configuration.html)
+- bo目录包含了合约函数输入参数的封装POJO类。
+- service目录包含了每个智能合约的输入参数。
 
 ### 后续合约开发
+
+请将配置文件拷贝到生成工程的conf目录下。conf包含证书和配置信息，
 
 当用户基于生成的项目进行开发时，若需要修改合约，用户在修改完合约后，可在项目工程目录下直接编译合约：
 ```
@@ -80,7 +75,7 @@ cd [demo directory]
 gradle solc
 ```
 
-新的java合约及abi、bin会被刷新到目录下。
+新的abi、bin会被刷新到目录下。
 
 ### 后续项目开发
 
@@ -88,15 +83,18 @@ gradle solc
 
 ```
     @Test
-    public void demo() throws Exception {
+    public void test() throws Exception {
 
         BcosSDK bcosSDK = BcosSDK.build("conf/config.toml");
         Client client = bcosSDK.getClient(1);
 
-        String contractAddress = "0x...";
-        EvidenceControllerService service
-                = new EvidenceControllerService(contractAddress, client);
-        TransactionResponse response = service.voteSaveRequest(new EvidenceControllerVoteSaveRequestInputBO(new byte[]{1,2,3}));
-
+        //方式1：自动部署一个合约
+        HelloWorldService service
+                = new HelloWorldService(client);//替换成实际生成项目中的对应合约
+        //方式2：从指定地址加载合约
+        HelloWorldService service2
+                = new HelloWorldService(service.getAddress(), client);//替换成实际生成项目中的对应合约
+        TransactionResponse setResponse = service.set(new HelloWorldSetInputBO("hello"));
+        CallResponse callResponse = service.get();
     }
 ```
