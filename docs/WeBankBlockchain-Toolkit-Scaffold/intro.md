@@ -64,8 +64,9 @@ bash run.sh myProject com.webank
 
 其中：
 - conf目录包含区块链链接配置。关于配置的信息更多请见[说明](https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/sdk/java_sdk/configuration.html)
-- bo目录包含了合约函数输入参数的封装POJO类。
-- service目录包含了每个智能合约的输入参数。
+- service目录中包含了智能合约访问的Service类，一个类对应一个合约。
+- model.bo目录包含了合约函数输入参数的封装POJO类。
+- contracts目录包含了java合约
 
 ### 后续合约开发
 
