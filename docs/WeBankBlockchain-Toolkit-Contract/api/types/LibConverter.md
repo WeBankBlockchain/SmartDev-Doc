@@ -164,7 +164,7 @@ function f() public view{
 ```
 function f() public view{
     uint256 a = 25;
-    bytes b = LibConverter.uintToBytes(a);
+    bytes memory b = LibConverter.uintToBytes(a);
     //TODO:
 }
 ```
@@ -185,7 +185,7 @@ function f() public view{
 
 ```
 function f() public view{
-    bytes a = "25";
+    bytes memory a = "25";
     int b = LibConverter.bytesToInt(a);
     //TODO:
 }
@@ -208,7 +208,7 @@ function f() public view{
 ```
 function f() public view{
     int a = 25;
-    bytes b = LibConverter.intToBytes(a);
+    bytes memory b = LibConverter.intToBytes(a);
     //TODO:
 }
 ```
