@@ -119,7 +119,7 @@ contract test {
         uint256 key = 3;
         bool flag;
         uint index;
-        return LibArrayForUint256Utils.binarySearch(array, key);//Expected (true, 2)
+        return LibArrayForUint256Utils.firstIndexOf(array, key);//Expected (true, 2)
     }
 }
 ```
