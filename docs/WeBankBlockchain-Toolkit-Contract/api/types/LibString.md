@@ -60,7 +60,7 @@ contract TestString {
 #### 实例
 
 ```
-    function f() public view{
+    function f() public {
         string memory str = "字符串";
         uint len = LibString.lenOfChars(str);//Expected to be 3
         //TODO:
@@ -82,7 +82,7 @@ contract TestString {
 #### 实例
 
 ```
-    function f() public view{
+    function f() public {
         string memory str = "字符串";
         uint len = LibString.lenOfBytes(str);//Expected to be 9
         //TODO:
@@ -105,7 +105,7 @@ startWith用于判断一个字符串是否为另一个字符串的前缀串
 #### 实例
 
 ```
-    function f() public view {
+    function f() public  {
         
         bool r = LibString.startWith("abcd","ab");//Expected to be true
         //TODO:
@@ -128,7 +128,7 @@ endWith用于测试一个字符串是否为另一个字符串的尾缀串
 #### 实例
 
 ```
-    function f() public view {
+    function f() public  {
         
         bool r = LibString.endWith("abcd","cd");//Expected to be true
         //TODO:
@@ -151,7 +151,7 @@ endWith用于测试一个字符串是否为另一个字符串的尾缀串
 #### 实例
 
 ```
-    function f() public view {
+    function f() public  {
         
         bool r = LibString.equal("abcd","abcd");//Expected to be true
         //TODO:
@@ -174,7 +174,7 @@ endWith用于测试一个字符串是否为另一个字符串的尾缀串
 #### 实例
 
 ```
-    function f() public view {
+    function f() public  {
         
         bool r = LibString.equal("abcd","ABCD");//Expected to be true
         //TODO:
@@ -196,7 +196,7 @@ endWith用于测试一个字符串是否为另一个字符串的尾缀串
 #### 实例
 
 ```
-    function f() public view returns(bool, bool){
+    function f() public returns(bool, bool){
         
         bool r1 = LibString.empty("abcd");//Expected to be false
         bool r2 = LibString.empty("");//Expected to be true
@@ -245,7 +245,7 @@ substrByCharIndex方法用于提取子字符串。
 #### 实例
 
 ```
-    function f() public view returns(string) {
+    function f() public returns(string) {
         string memory full = "完整字符串";
         string memory sub = LibString.substrByCharIndex(full ,2, 3);//Expected to be 字符串
         return sub;
@@ -268,7 +268,7 @@ substrByCharIndex方法用于提取子字符串。
 #### 实例
 
 ```
-    function f() public view {
+    function f() public {
         
         int8 c = LibString.compare("abcd","abcd");// Expected to be 0
     }
@@ -291,7 +291,7 @@ substrByCharIndex方法用于提取子字符串。
 #### 实例
 
 ```
-    function f() public view {
+    function f() public {
         
         int8 c = LibString.compareNocase("abcd","ABCD");// Expected to be 0
     }
@@ -312,7 +312,7 @@ substrByCharIndex方法用于提取子字符串。
 #### 实例
 
 ```
-    function f() public view {
+    function f() public  {
         
         string c = LibString.toUppercase("abcd");// Expected to be ABCD
     }
@@ -333,7 +333,7 @@ substrByCharIndex方法用于提取子字符串。
 #### 实例
 
 ```
-    function f() public view {
+    function f() public {
         
         string c = LibString.toLowercase("ABCD");// Expected to be abcd
     }
@@ -355,7 +355,7 @@ substrByCharIndex方法用于提取子字符串。
 #### 实例
 
 ```
-    function f() public view {
+    function f() public {
         
         int c = LibString.indexOf("ABCD", "B");// Expected to be 1
     }
@@ -378,7 +378,7 @@ substrByCharIndex方法用于提取子字符串。
 #### 实例
 
 ```
-    function f() public view {
+    function f() public {
         
         int c = LibString.indexOf("ABCD", "B", 0);// Expected to be 1
     }
@@ -401,7 +401,7 @@ substrByCharIndex方法用于提取子字符串。
 #### 实例
 
 ```
-    function f() public view {
+    function f() public {
         
         string[] c = LibString.split("A,B,CD", ",");// Expected to be ["A", "B", "CD"]
     }
