@@ -13,10 +13,10 @@ import "./LibString.sol";
 
 contract TestString {
     
-    function f() public view returns(uint){
+    function f() public view returns(uint ){
         string memory str = "字符串";
         uint len = LibString.lenOfChars(str);//Expected to be 3
-        //TODO:
+        return len;
     }
 }
 ```
@@ -60,10 +60,10 @@ contract TestString {
 #### 实例
 
 ```
-    function f() public {
+    function f() public view returns(uint ){
         string memory str = "字符串";
         uint len = LibString.lenOfChars(str);//Expected to be 3
-        //TODO:
+        return len;
     }
 ```
 
@@ -82,10 +82,10 @@ contract TestString {
 #### 实例
 
 ```
-    function f() public {
+    function f() public view returns(uint ){
         string memory str = "字符串";
         uint len = LibString.lenOfBytes(str);//Expected to be 9
-        //TODO:
+        return len;
     }
 ```
 
@@ -105,10 +105,9 @@ startWith用于判断一个字符串是否为另一个字符串的前缀串
 #### 实例
 
 ```
-    function f() public  {
-        
+    function f() public view returns(bool){
         bool r = LibString.startWith("abcd","ab");//Expected to be true
-        //TODO:
+        return r;
     }
 ```
 
@@ -128,10 +127,9 @@ endWith用于测试一个字符串是否为另一个字符串的尾缀串
 #### 实例
 
 ```
-    function f() public  {
-        
-        bool r = LibString.endWith("abcd","cd");//Expected to be true
-        //TODO:
+    function f() public view returns(bool){
+        bool r = LibString.startWith("abcd","cd");//Expected to be true
+        return r;
     }
 ```
 
@@ -151,10 +149,9 @@ endWith用于测试一个字符串是否为另一个字符串的尾缀串
 #### 实例
 
 ```
-    function f() public  {
-        
+    function f() public view returns(bool){
         bool r = LibString.equal("abcd","abcd");//Expected to be true
-        //TODO:
+        return r;
     }
 ```
 
@@ -174,10 +171,9 @@ endWith用于测试一个字符串是否为另一个字符串的尾缀串
 #### 实例
 
 ```
-    function f() public  {
-        
-        bool r = LibString.equal("abcd","ABCD");//Expected to be true
-        //TODO:
+    function f() public view returns(bool){
+        bool r = LibString.equalNocase("abcd","ABCD");//Expected to be true
+        return r;
     }
 ```
 
@@ -221,10 +217,10 @@ endWith用于测试一个字符串是否为另一个字符串的尾缀串
 #### 实例
 
 ```
-    function f() public {
+    function f() public returns(string memory){
         string memory s1 = "ab";
         string memory s2 = "cd";
-        string memory r = LibString.concat(s1,s2);//Exptected to be abcd
+        return LibString.concat(s1,s2);//Exptected to be abcd
     }
 ```
 
@@ -245,7 +241,7 @@ substrByCharIndex方法用于提取子字符串。
 #### 实例
 
 ```
-    function f() public returns(string) {
+    function f() public returns(string memory) {
         string memory full = "完整字符串";
         string memory sub = LibString.substrByCharIndex(full ,2, 3);//Expected to be 字符串
         return sub;
@@ -268,7 +264,7 @@ substrByCharIndex方法用于提取子字符串。
 #### 实例
 
 ```
-    function f() public {
+    function f() public view returns(int8){
         
         int8 c = LibString.compare("abcd","abcd");// Expected to be 0
     }
@@ -291,9 +287,9 @@ substrByCharIndex方法用于提取子字符串。
 #### 实例
 
 ```
-    function f() public {
+    function f() public view returns(int8){
         
-        int8 c = LibString.compareNocase("abcd","ABCD");// Expected to be 0
+        int8 c = LibString.compareNocase("abcd","abcd");// Expected to be 0
     }
 ```
 
@@ -312,9 +308,10 @@ substrByCharIndex方法用于提取子字符串。
 #### 实例
 
 ```
-    function f() public  {
+    function f() public view returns(string memory)  {
         
-        string c = LibString.toUppercase("abcd");// Expected to be ABCD
+        string memory c = LibString.toUppercase("abcd");// Expected to be ABCD
+        return c;
     }
 ```
 
@@ -333,9 +330,10 @@ substrByCharIndex方法用于提取子字符串。
 #### 实例
 
 ```
-    function f() public {
+    function f() public view returns(string memory)  {
         
-        string c = LibString.toLowercase("ABCD");// Expected to be abcd
+        string memory c = LibString.toLowercase("ABCD");// Expected to be abcd
+        return c;
     }
 ```
 
@@ -355,9 +353,10 @@ substrByCharIndex方法用于提取子字符串。
 #### 实例
 
 ```
-    function f() public {
+    function f() public view returns(int) {
         
         int c = LibString.indexOf("ABCD", "B");// Expected to be 1
+        return c;
     }
 ```
 
@@ -378,9 +377,11 @@ substrByCharIndex方法用于提取子字符串。
 #### 实例
 
 ```
-    function f() public {
+    function f() public view returns(int){
         
         int c = LibString.indexOf("ABCD", "B", 0);// Expected to be 1
+        return c;
+        
     }
 ```
 
@@ -401,8 +402,11 @@ substrByCharIndex方法用于提取子字符串。
 #### 实例
 
 ```
-    function f() public {
+    
+    function f() public view returns(string[] memory){
         
-        string[] c = LibString.split("A,B,CD", ",");// Expected to be ["A", "B", "CD"]
+        string[] memory c = LibString.split("A,B,CD", ",");// Expected to be ["A", "B", "CD"]
+        return c;
+        
     }
 ```
