@@ -221,7 +221,7 @@ endWith用于测试一个字符串是否为另一个字符串的尾缀串
 #### 实例
 
 ```
-    function f() public view {
+    function f() public {
         string memory s1 = "ab";
         string memory s2 = "cd";
         string memory r = LibString.concat(s1,s2);//Exptected to be abcd
