@@ -50,7 +50,7 @@ isContract方法用于判断一个address是否为合约地址。
 #### 实例
 
 ```
-address myContract = "0x2177482819289293288f8d8s88f99f99s";
+address myContract = 0xE0f5206BBD039e7b0592d8918820024e2a7437b9;
 if(LibAddress.isContract(myContract)){
     //TODO:
 }
@@ -70,7 +70,8 @@ isEmptyAddress方法用于判断一个address是否为空地址。
 #### 实例
 
 ```
-address addr = "0x00";
+    
+address addr = address(0);
 if(!LibAddress.isEmptyAddress(addr)){
     //TODO:
 }
@@ -90,7 +91,7 @@ addressToBytes方法可以把一个地址类型转化为bytes类型。
 #### 实例
 
 ```
-address addr = "0xdfe34njfdkajfej9890f";
+address addr = 0xE0f5206BBD039e7b0592d8918820024e2a7437b9;
 bytes bs = LibAddress.addressToBytes(addr);
 //TODO:
 ```
@@ -101,7 +102,7 @@ bytesToAddress方法可以把一个bytes类型转化为address类型。
 
 #### 参数
 
-- bytes：字节数组
+- bytes：字节数组。要求20字节。
 
 #### 返回值
 
@@ -110,7 +111,7 @@ bytesToAddress方法可以把一个bytes类型转化为address类型。
 #### 实例
 
 ```
-bytes bs = "0xdfe34njfdkajfej9890f";
+bytes memory bs = new bytes(20);
 address addr = LibAddress.bytesToAddress(bs);
 //TODO:
 ```
@@ -130,8 +131,8 @@ addressToString方法可以把一个address类型转化为string类型。
 #### 实例
 
 ```
-address addr = "0xdfe34njfdkajfej9890f";
-string addrStr = LibAddress.addressToString(addr);
+address addr = 0xE0f5206BBD039e7b0592d8918820024e2a7437b9;
+string memory addrStr = LibAddress.addressToString(addr);
 //TODO:
 ```
 
@@ -150,7 +151,7 @@ stringToAddress方法可以把一个string类型转化为address类型。
 #### 实例
 
 ```
-string str = "0xdfe34njfdkajfej9890f";
+string memory str = "0xE0f5206BBD039e7b0592d8918820024e2a7437b9";
 address addr = LibAddress.stringToAddress(str);
 //TODO:
 ```
