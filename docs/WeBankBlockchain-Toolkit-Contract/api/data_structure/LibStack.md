@@ -57,6 +57,8 @@ contract Test {
 #### 实例
 
 ```
+stack.push(bytes32(uint(1)));
+```
 pragma solidity ^0.6.10;
 
 import "./LibStack.sol";
@@ -68,7 +70,7 @@ contract Test {
     LibStack.Stack private stack;
     
     function f() public returns(uint ) {
-        stack.push(bytes32(uint(1)));
+        
         stack.push(bytes32(uint(2)));
         uint size = stack.getSize();//Expected to be 1
         return size;
