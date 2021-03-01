@@ -25,7 +25,6 @@
 |LibStack|栈|提供栈相关操作，如进栈、出栈等|[API](./api/data_structure/LibStack.html) |
 |LibQueue|队列|单向队列相关操作，入队、出队等|[API](./api/data_structure/LibQueue.html)|
 |LibDeque|队列|双向队列相关操作，入队、出队等|[API](./api/data_structure/LibDeque.html)|
-|LibBytes32Set|bytes32类型集合|集合操作，增删改查等| [API](./api/data_structure/LibBytes32Set.html)|
 |LibAddressSet|address类型集合|集合操作，增删改查等| [API](./api/data_structure/LibAddressSet.html)|
 |LibBytesMap|映射|映射操作，存、取、移除等|[API](./api/data_structure/LibBytesMap.html)|
 |LibLinkedList|双向链表|链表相关操作|[API](./api/data_structure/LibLinkedList.html)|
