@@ -45,11 +45,14 @@ bash run.sh
 ```
 
 此外，用户可以在config.ini中做额外配置，包括：
-| 选项 | 功能 | 示例 |
-| --- | --- | --- | 
-|artifact|项目名称|demo|
-|group|组名称|org.example|
-|need|所支持的合约列表，避免为所有合约生成相应类。如不填写，则默认为所有合约生成相应代码，如填写请按逗号分隔|Contract1,Contract2|
+```
+### 项目名称
+artifact=demo
+### 组名称
+group=org.example|
+### 所支持的合约列表，避免为所有合约生成相应类。如不填写，则默认为所有合约生成相应代码，如填写请按逗号分隔|Contract1,Contract2
+need=
+```
 
 运行成功后，会在tools目录下得到一个基于SpringBoot的项目工程项目：
 ```
