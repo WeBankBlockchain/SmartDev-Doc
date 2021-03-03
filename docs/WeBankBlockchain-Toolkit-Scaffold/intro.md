@@ -33,71 +33,118 @@ tools目录包含了执行环境，其结构为：
 │   ├── contracts
 │   ├──── HelloWorld.sol
 │   ├── run.sh
+│   ├── config.ini
 ```
 其中contracts目录用于存放solidity合约文件，脚手架后续会读取该目录下的合约以生成对应的业务工程。请删除该目录下的默认合约，并将自己的业务合约拷贝到该目录下。
 
 ### 运行脚手架
-
+可以直接启动脚本：
 ```
 chmod +x run.sh
 bash run.sh
 ```
 
-用户可以指定artifact和group，例如
-```
-bash run.sh myProject com.webank
-```
+此外，用户可以在config.ini中做额外配置，包括：
+| 选项 | 功能 | 示例 |
+| --- | --- | --- | 
+|artifact|项目名称|demo|
+|group|组名称|org.example|
+|need|所支持的合约列表，避免为所有合约生成相应类。如不填写，则默认为所有合约生成相应代码，如填写请按逗号分隔|Contract1,Contract2|
 
-如果用户不指定，则项目名默认采用demo，group默认采用org.example。
-
-### 生成效果
-运行成功后，会在目录下得到一个项目工程项目：
+运行成功后，会在tools目录下得到一个基于SpringBoot的项目工程项目：
 ```
 ├─contracts
 ├─run.sh
-└─myProject
+└─demo
 ```
 其中生成项目的具体内容如下：
-
 
 ![](image/Sample.png)
 
 其中：
-- conf目录包含区块链链接配置。关于配置的信息更多请见[说明](https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/sdk/java_sdk/configuration.html)
+- config目录包含Bean配置类
 - service目录中包含了智能合约访问的Service类，一个类对应一个合约。
 - model.bo目录包含了合约函数输入参数的封装POJO类。
-- contracts目录包含了java合约
+- src/main/resource/conf目录用于存放证书信息
 
-### 后续合约开发
+### DAPP开发示例
+#### 部署合约
+使用控制台部署HelloWorld合约
+#### 证书拷贝
+请将配置文件拷贝到生成工程的conf目录或src/main/conf目录下。
+#### 配置连接节点
+请修改application.properties，该文件包含如下信息：
+```
+### Required
+system.peers=127.0.0.1:20200,127.0.0.1:20201
+### Required
+system.groupId=1
+### Optional. Default will search conf,config,src/main/conf/src/main/config
+system.certPath=conf,config,src/main/conf,src/main/config
+### Optional. If don't specify a random private key will be used
+system.hexPrivateKey=
+### Optional. Please fill this address if you want to use related service
+system.contract.helloWorldAddress=
 
-请将配置文件拷贝到生成工程的conf目录下。conf包含证书和配置信息，
+```
+其中system.peers更换成实际的链节点监听地址；system.helloWorldAddress更换成前面部署过的合约地址。
 
-当用户基于生成的项目进行开发时，若需要修改合约，用户在修改完合约后，可在项目工程目录下直接编译合约：
+#### 补全业务
+一个完整的DAPP应包含至少三层架构，本示例补全一个Controller。
+在org.example.controller下新建一个Controller类，如下：
+```
+@RestController
+@RequestMapping("hello")
+public class HelloController {
+
+    @Autowired
+    private HelloWorldService service;
+    
+    @GetMapping("set")
+    public Object set(@RequestParam("n") String n) throws Exception{
+        HelloWorldSetInputBO input = new HelloWorldSetInputBO(n);
+        return service.set(input).getTransactionReceipt().getTransactionHash();
+    }
+
+    @GetMapping("get")
+    public String get() throws Exception{
+        return service.get().getValues();
+    }
+}
+
+```
+
+#### 运行jar包
+```
+cd demo
+gradle bootJar
+cd dist
+```
+会在dist目录生成demo-exec.jar，可执行此jar包：
+```
+java -jar demo-exec.jar
+```
+随后，可在浏览器内输入:
+```
+http://127.0.0.1:8080/hello/set?n=hello
+```
+返回示例：
+```
+0x1c8b283daef12b38632e8a6b8fe4d798e053feb5128d9eaf2be77c324645763b
+```
+
+```
+http://127.0.0.1:8080/hello/get
+```
+返回示例：
+```
+["hello"]
+```
+#### 其他
+当用户基于生成的项目进行开发时，若需要更新abi和bin，可在项目工程目录下直接编译合约：
 ```
 cd [demo directory]
 gradle solc
 ```
 
-新的abi、bin会被刷新到目录下。
-
-### 后续项目开发
-
-用户可调用生成的Service类，例如：
-
-```
-    @Test
-    public void test() throws Exception {
-
-        BcosSDK bcosSDK = BcosSDK.build("conf/config.toml");
-        Client client = bcosSDK.getClient(1);
-
-        //方式1：自动部署一个合约
-        HelloWorldService service
-                = new HelloWorldService(client);//替换成实际生成项目中的对应合约
-        //方式2：从指定地址加载合约
-        HelloWorldService service2
-                = new HelloWorldService(service.getAddress(), client);//替换成实际生成项目中的对应合约
-        TransactionResponse setResponse = service.set(new HelloWorldSetInputBO("hello"));
-        CallResponse callResponse = service.get();
-    }
-```
+新的abi、bin会被刷新到src/main/resources目录下。
