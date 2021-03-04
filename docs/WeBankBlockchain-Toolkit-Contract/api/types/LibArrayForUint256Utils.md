@@ -7,7 +7,7 @@ LibArrayForUint256Utils提供了Uint256数组的相关操作，包括查找、�
 首先需要通过import引LibArrayForUint256Utils类库，然后通过"."进行方法调用，如下为调用indexOf方法的例子：
 
 ```
-pragma solidity ^0.6.10;
+pragma solidity >=0.4.24 <0.6.11;
 
 import "./LibArrayForUint256Utils.sol";
 
@@ -66,7 +66,7 @@ binarySearch对一个升序排列的数组进行二分查找，如果找到，�
 #### 实例
 
 ```
-pragma solidity ^0.6.10;
+pragma solidity >=0.4.24 <0.6.11;
 
 import "./LibArrayForUint256Utils.sol";
 
@@ -103,7 +103,7 @@ contract test {
 #### 实例
 
 ```
-pragma solidity ^0.6.10;
+pragma solidity >=0.4.24 <0.6.11;
 
 import "./LibArrayForUint256Utils.sol";
 
@@ -139,7 +139,7 @@ reverse方法对任意数组进行元素翻转。
 #### 实例
 
 ```
-pragma solidity ^0.6.10;
+pragma solidity >=0.4.24 <0.6.11;
 
 import "./LibArrayForUint256Utils.sol";
 
@@ -173,7 +173,7 @@ equals方法用于判断两个数组是否相等，当两个数组的元素完�
 #### 实例
 
 ```
-pragma solidity ^0.6.10;
+pragma solidity >=0.4.24 <0.6.11;
 
 import "./LibArrayForUint256Utils.sol";
 
@@ -211,7 +211,7 @@ removeByIndex方法用于根据索引删除数组元素。当数据越界时报�
 #### 实例
 
 ```
-pragma solidity ^0.6.10;
+pragma solidity >=0.4.24 <0.6.11;
 
 import "./LibArrayForUint256Utils.sol";
 
@@ -246,7 +246,7 @@ removeByValue方法用于根据元素值删除数组元素。当数据越界时�
 #### 实例
 
 ```
-pragma solidity ^0.6.10;
+pragma solidity >=0.4.24 <0.6.11;
 
 import "./LibArrayForUint256Utils.sol";
 
@@ -281,7 +281,7 @@ addValue方法用于向数组中添加元素，且保持数组的元素唯一。
 #### 实例
 
 ```
-pragma solidity ^0.6.10;
+pragma solidity >=0.4.24 <0.6.11;
 
 import "./LibArrayForUint256Utils.sol";
 
@@ -313,7 +313,7 @@ extend方法用于合并两个数组，将第二个数组中的元素按照顺�
 #### 实例
 
 ```
-pragma solidity ^0.6.10;
+pragma solidity >=0.4.24 <0.6.11;
 
 import "./LibArrayForUint256Utils.sol";
 
@@ -346,7 +346,7 @@ distinct方法用于对数组进行去重操作。
 #### 实例
 
 ```
-pragma solidity ^0.6.10;
+pragma solidity >=0.4.24 <0.6.11;
 
 import "./LibArrayForUint256Utils.sol";
 
@@ -380,7 +380,7 @@ qsort方法用于对数组进行快速排序。
 #### 实例
 
 ```
-pragma solidity ^0.6.10;
+pragma solidity >=0.4.24 <0.6.11;
 
 import "./LibArrayForUint256Utils.sol";
 
@@ -415,7 +415,7 @@ contract test {
 #### 实例
 
 ```
-pragma solidity ^0.6.10;
+pragma solidity >=0.4.24 <0.6.11;
 
 import "./LibArrayForUint256Utils.sol";
 
@@ -449,7 +449,7 @@ contract test {
 #### 实例
 
 ```
-pragma solidity ^0.6.10;
+pragma solidity >=0.4.24 <0.6.11;
 
 import "./LibArrayForUint256Utils.sol";
 
