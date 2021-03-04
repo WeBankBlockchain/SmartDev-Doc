@@ -1,6 +1,6 @@
 # 快速开始
 
-智能合约脚手架用于一键式生成DAPP应用开发工程，从而降低应用开发的难度。用户将自己的合约导入脚手架，即可生成对应的应用开发模板工程，包含了java合约、测试代码等。此外，当用户修改了合约时，不必再使用控制台重新编译，而是可通过植入项目的gradle插件进行编译，新编译的java合约会被更新到项目中。
+智能合约脚手架用于一键式生成DAPP应用开发工程，从而降低应用开发的难度。用户将自己的合约导入脚手架，即可生成对应的应用开发模板工程，包含了对应的POJO类、服务类等，用户可基于此直接开发dapp web项目。
 
 ## 前置依赖
 
@@ -19,8 +19,7 @@
 目前支持基于命令行的方式，后续会推出基于可视化的使用方式，进一步降低用户使用的难度。
 
 
-### 安装脚手架
-目前支持从源码安装。
+### 下载脚手架
 
 ```
 git clone https://github.com/WeBankBlockchain/SmartDev-Scaffold.git
@@ -35,23 +34,26 @@ tools目录包含了执行环境，其结构为：
 │   ├── run.sh
 │   ├── config.ini
 ```
-其中contracts目录用于存放solidity合约文件，脚手架后续会读取该目录下的合约以生成对应的业务工程。请删除该目录下的默认合约，并将自己的业务合约拷贝到该目录下。
+其中：
+- contracts目录用于存放solidity合约文件，脚手架后续会读取该目录下的合约以生成对应的业务工程。请删除该目录下的默认合约，并将自己的业务合约拷贝到该目录下。
+- run.sh是启动脚本
+- config.ini是启动相关配置。
 
+### 配置脚手架
+用户可以在config.ini中做轻量化配置，如下：
+```
+### 项目名称
+artifact=demo
+### 组名称
+group=org.example
+### 所支持的合约列表，避免为所有合约生成相应类。默认空，表示为所有合约生成相应代码；如填写此配置项，请按逗号分隔，例如Contract1,Contract2
+need=
+```
 ### 运行脚手架
 可以直接启动脚本：
 ```
 chmod +x run.sh
 bash run.sh
-```
-
-此外，用户可以在config.ini中做额外配置，包括：
-```
-### 项目名称
-artifact=demo
-### 组名称
-group=org.example|
-### 所支持的合约列表，避免为所有合约生成相应类。如不填写，则默认为所有合约生成相应代码，如填写请按逗号分隔|Contract1,Contract2
-need=
 ```
 
 运行成功后，会在tools目录下得到一个基于SpringBoot的项目工程项目：
@@ -67,10 +69,11 @@ need=
 其中：
 - config目录包含Bean配置类
 - service目录中包含了智能合约访问的Service类，一个类对应一个合约。
-- model.bo目录包含了合约函数输入参数的封装POJO类。
+- bo目录包含了合约函数输入参数的封装POJO类。
 - src/main/resource/conf目录用于存放证书信息
 
-### DAPP开发示例
+### DAPP开发
+这里介绍DAPP开发过程，以前面生成的demo项目工程为例。
 #### 部署合约
 使用控制台部署HelloWorld合约
 #### 证书拷贝
@@ -104,7 +107,7 @@ public class HelloController {
     private HelloWorldService service;
     
     @GetMapping("set")
-    public Object set(@RequestParam("n") String n) throws Exception{
+    public String set(@RequestParam("n") String n) throws Exception{
         HelloWorldSetInputBO input = new HelloWorldSetInputBO(n);
         return service.set(input).getTransactionReceipt().getTransactionHash();
     }
@@ -144,7 +147,7 @@ http://127.0.0.1:8080/hello/get
 ["hello"]
 ```
 #### 其他
-当用户基于生成的项目进行开发时，若需要更新abi和bin，可在项目工程目录下直接编译合约：
+当用户基于生成的项目进行开发时，若需要修改合约，可在项目工程目录下直接编译合约：
 ```
 cd [demo directory]
 gradle solc
