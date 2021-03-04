@@ -49,6 +49,6 @@
 通过git下载源码：
 
 ```
-git clone git@github.com:WeBankBlockchain/Toolkit-Contract.git
+https://github.com/WeBankBlockchain/SmartDev-Contract.git
 ```
 
