@@ -74,7 +74,7 @@ need=
 #### 部署合约
 使用控制台部署HelloWorld合约
 #### 证书拷贝
-请将配置文件拷贝到生成工程的conf目录或src/main/conf目录下。
+请将配置文件拷贝到生成工程的conf目录或src/main/resources/conf目录下。该业务工程会自动在这些路径下搜索证书。
 #### 配置连接节点
 请修改application.properties，该文件包含如下信息：
 ```
