@@ -57,8 +57,6 @@ contract Test {
 #### 实例
 
 ```
-stack.push(bytes32(uint(1)));
-```
 pragma solidity >=0.4.24 <0.6.11;
 
 import "./LibStack.sol";
