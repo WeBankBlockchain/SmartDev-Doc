@@ -56,7 +56,7 @@ chmod +x run.sh
 bash run.sh
 ```
 
-运行成功后，会在tools目录下得到一个基于SpringBoot的项目工程项目：
+运行成功后，会在tools目录下得到一个基于SpringBoot的项目工程：
 ```
 ├─contracts
 ├─run.sh
