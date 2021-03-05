@@ -153,4 +153,4 @@ cd [demo directory]
 gradle solc
 ```
 
-新的abi、bin会被刷新到src/main/resources目录下。
+新的abi、bin会被刷新到src/main/resources目录下，但相关Service类和BO类并不会被重新生成，需要用户自行修改。
