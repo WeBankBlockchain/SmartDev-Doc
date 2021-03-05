@@ -31,13 +31,13 @@ tools目录包含了执行环境，其结构为：
 ├── tools
 │   ├── contracts
 │   ├──── HelloWorld.sol
-│   ├── run.sh
 │   ├── config.ini
+│   ├── run.sh
 ```
 其中：
 - contracts目录用于存放solidity合约文件，脚手架后续会读取该目录下的合约以生成对应的业务工程。请删除该目录下的默认合约，并将自己的业务合约拷贝到该目录下。
-- run.sh是启动脚本
 - config.ini是启动相关配置。
+- run.sh是启动脚本
 
 ### 配置脚手架
 用户可以在config.ini中做轻量化配置，如下：
@@ -47,7 +47,7 @@ artifact=demo
 ### 组名称
 group=org.example
 ### 所支持的合约列表，避免为所有合约生成相应类。默认空，表示为所有合约生成相应代码；如填写此配置项，请按逗号分隔，例如Contract1,Contract2
-need=
+selector=
 ```
 ### 运行脚手架
 可以直接启动脚本：
