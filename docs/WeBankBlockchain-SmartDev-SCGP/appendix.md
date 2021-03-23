@@ -14,13 +14,13 @@ gradle solc --refresh-dependencies
 下载代码：
 
 ```
-git clone https://github.com/WeBankBlockchain/Toolkit-SCGP.git
+git clone https://github.com/WeBankBlockchain/SmartDev-SCGP.git
 ```
 
 安装插件：
 
 ```
-cd Toolkit-SCGP
+cd SmartDev-SCGP
 gradle install
 ```
 

@@ -98,7 +98,7 @@ templates_path = ['_templates']
 master_doc = 'index'
 
 # General information about the project.
-project = u'WeBankBlockchain-Toolkit-Doc'
+project = u'WeBankBlockchain-SmartDev-Doc'
 copyright = u'© 2020. All rights reserved.'
 author = u'WeBankBlockchain-dev'
 
@@ -166,7 +166,7 @@ todo_include_todos = True
 # VCS options: https://docs.readthedocs.io/en/latest/vcs.html#github
 html_context = {
     "display_github": True, # Integrate GitHub
-    "github_repo": "Toolkit-Doc", # Repo name
+    "github_repo": "SmartDev-Doc", # Repo name
     "github_user": "blockchain-dev",
     "github_version": "dev", # Version
     "conf_py_path": "/", # Path in the checkout to the docs root
@@ -263,7 +263,7 @@ html_search_language = 'zh'
 #html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Toolkit-Doc'
+htmlhelp_basename = 'SmartDev-Doc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -302,7 +302,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  (master_doc, 'Toolkit-Doc.tex', u'WeBankBlockchain Toolkit Documentation',
+  (master_doc, 'SmartDev-Doc.tex', u'WeBankBlockchain SmartDev Documentation',
    u'blockchain-dev', 'manual'),
 ]
 
@@ -332,7 +332,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'WeBankBlockchain Toolkit Doc', u'WeBankBlockchain Toolkit Documentation',
+    (master_doc, 'WeBankBlockchain SmartDev Doc', u'WeBankBlockchain SmartDev Documentation',
      [author], 1)
 ]
 
@@ -346,8 +346,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  (master_doc, 'WeBankBlockchain Toolkit Doc', u'WeBankBlockchain Toolkit Documentation',
-   author, 'blockchain-dev', 'documents of WeBankBlockchain Toolkit',
+  (master_doc, 'WeBankBlockchain SmartDev Doc', u'WeBankBlockchain SmartDev Documentation',
+   author, 'blockchain-dev', 'documents of WeBankBlockchain SmartDev',
    'Miscellaneous'),
 ]
 

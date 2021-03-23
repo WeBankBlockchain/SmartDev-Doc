@@ -20,15 +20,15 @@ WeBankBlockchain-SmartDev 技术文档
     - **Scaffold DAPP开发脚手架** 
     用于根据智能合约文件，得到DAPP项目模板，里面包含了合约函数的交易、调用功能。 
 
-    - **SCGP solidity gradle编译插件** 
+    - **SCGP (Solidity Compiler Gradle Plugin)编译插件** 
     一个gradle插件，可以编译项目中的智能合约，并拷贝到对应包目录下。 
 
 .. toctree::
    :maxdepth: 3
 
-   ./docs/WeBankBlockchain-Toolkit-Contract/index.md
-   ./docs/WeBankBlockchain-Toolkit-SCGP/index.md
-   ./docs/WeBankBlockchain-Toolkit-Scaffold/index.md
+   ./docs/WeBankBlockchain-SmartDev-Contract/index.md
+   ./docs/WeBankBlockchain-SmartDev-SCGP/index.md
+   ./docs/WeBankBlockchain-SmartDev-Scaffold/index.md
 .. 
 
 
