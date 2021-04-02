@@ -1,5 +1,5 @@
 # SmartDev-Doc
-WeBankBlockchain-SmartDev区块链应用开发组件[文档]https://toolkit-doc.readthedocs.io/zh_CN/latest/)
+WeBankBlockchain-SmartDev区块链应用开发组件[文档](https://toolkit-doc.readthedocs.io/zh_CN/latest/)
 
 ## 组件介绍
 ### **WeBankBlockchain-SmartDev-Contract  智能合约库组件** 
