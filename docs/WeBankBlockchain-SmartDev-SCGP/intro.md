@@ -13,8 +13,6 @@
 | Git | 下载安装包需要使用Git | |
 | Gradle | >=6.0.1| |
 
-
-
 ## 快速开始
 
 ### 创建业务工程
@@ -25,7 +23,7 @@
 
 ### 插件配置
 
-业务方需要在build.gradle中引入插件：
+业务方需要在build.gradle中按如下方式引入插件。这段代码直接放在build.gradle首部：
 
 ```
 buildscript {
@@ -44,12 +42,20 @@ apply plugin: 'solc-gradle-plugin'
 
 ```
 
-然后进行配置，只需要配置包名即可：
+然后如下进行配置。如果要生成java合约，还需要通过pkg选项配置java合约所属包名
 
 ```
 solc{
     pkg = 'org.example.contracts'
 }
+插件的完整配置如下：
+
+| 配置项 | 必选 | 说明 |
+| --- | --- | --- |
+| pkg | 否 | java合约包名 |
+| contracts | 否 | 智能合约文件路径，默认为src/main/contracts |
+| output | 否 | 编译输出路径，默认为src/main |
+| onlyAbiBin | 否 | 是否只输出abi和bin默认false， |
 
 ```
 
@@ -73,13 +79,4 @@ gradle solc
 - bin：二进制文件,包含国密
 - java：java合约
 
-## 详细配置
-
-插件的完整配置如下：
-
-| 配置项 | 必选 | 说明 |
-| --- | --- | --- |
-| pkg | 是 | java合约包名 |
-| contracts | 否 | 智能合约文件相对路径，默认为src/main/contracts |
-| output | 否 | 编译输出的相对路径，默认为src/main |
 

@@ -40,7 +40,7 @@ tools目录包含了执行环境，其结构为：
 ```
 ├── tools
 │   ├── contracts
-│   ├──── HelloWorld.sol
+│   ├──|── HelloWorld.sol
 │   ├── config.ini
 │   ├── run.sh
 ```
@@ -50,15 +50,26 @@ tools目录包含了执行环境，其结构为：
 - run.sh是启动脚本
 
 ### 配置脚手架
-用户可以在config.ini中做轻量化配置，如下：
+#### 合约配置
+请删除contracts目录下的默认合约，并将自己的业务合约拷贝到该目录下。
+
+#### 生成配置
+可以在config.ini中做生成配置，如下：
 ```
 ### 项目名称
 artifact=demo
 ### 组名称
 group=org.example
-### 所支持的合约列表，避免为所有合约生成相应类。默认空，表示为所有合约生成相应代码；如填写此配置项，请按逗号分隔，例如Contract1,Contract2
+### 所支持的合约列表，通常为空即可
 selector=
 ```
+
+关于selector，如果需要只为指定合约进行编译输出，可以输入所需要的合约列表，按逗号分隔。例如下述代码中，只为AccountController,RoleController这两个合约：
+
+```
+selector=AccountController,RoleController
+```
+
 ### 运行脚手架
 可以直接启动脚本：
 ```
