@@ -20,9 +20,19 @@
 
 
 ### 下载脚手架
+从gitub下载脚手架：
 
 ```
-git clone https://github.com/WeBankBlockchain/SmartDev-Scaffold.git
+https://github.com/WeBankBlockchain/SmartDev-Contract.git
+```
+或者从gitee下载：
+
+```
+https://gitee.com/WeBankBlockchain/SmartDev-Contract.git
+```
+
+进入目录：
+```
 cd SmartDev-Scaffold/tools
 ```
 

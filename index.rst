@@ -4,24 +4,25 @@ WeBankBlockchain-SmartDev 技术文档
 
 .. admonition:: 什么是 WeBankBlockchain-SmartDev
 
-    对于区块链开发者，在智能合约开发中，经常会遇到各种问题，比如如何将账户地址和字符串互转，如何通过智能合约实现数据结构或者是否有一些可复用的智能合约代码？由于智能合约开发是一个相对较新的领域，在开发过程中，如果没有一套可参考的模板和代码库，不仅会影响了开发的效率，同时可能因为对智能合约开发的不熟悉造成系统安全风险。另一方面，当开发智能合约应用的时候，如果从头自己编写，会花费很多时间；此外，智能合约如果需要编译，首先需要安装控制台，然后在调试阶段，需要把合约导入控制台，编译后再把java合约拷贝出来调试，只要合约有变更，此流程就需要重新跑一边，非常的繁琐，严重影响开发效率。基于上述问题，我们编写了一套智能合约工具库，在减少合约漏洞的同时，提升智能合约的开发效率。目前，我们提供了智能合约库、dapp脚手架、合约编译插件这几个工具，覆盖dapp开发全生命周期。未来还会提供更多工具。
+    SmartDev的初衷是全方位助力开发者高效、敏捷的开发区块链应用。SmartDev包含了一套开放、轻量的开发组件集，覆盖合约的开发、调试、应用开发各个环节，开发者可根据自己的情况选择相应开发工具，提升开发效率。
 
 .. admonition:: 设计目标
-
-    - 提供智能合约库SmartDev-Contract，覆盖基础类型到上层业务
-    - DAPP开发脚手架SmartDev-Scaffold，轻松生成DAPP项目模板
-    - 合约编译插件SmartDev-Compiler，本地编译智能合约
+    - **轻量解耦**。所有的开发组件都是可独立使用。
+    
+    - **一站式**。覆盖了智能合约的研发、合约的编译、项目工程，几乎包含区块链应用开发的所有环节。
+        
+    - **简洁易用**。致力于提供简洁的使用体验，让用户轻松上手。
 
 .. admonition:: 组件简介
 
-    - **Contract  智能合约开源模板工具库** 
+    - **SmartDev-Contract  智能合约开源模板工具库** 
     包含基础类型、数据结构、通用功能、上层业务的solidity代码模板。
-    
-    - **Scaffold DAPP开发脚手架** 
-    用于根据智能合约文件，得到DAPP项目模板，里面包含了合约函数的交易、调用功能。 
 
-    - **SCGP (Solidity Compiler Gradle Plugin)编译插件** 
+    - **SCGP (Solidity Compiler Gradle Plugin) 合约编译插件** 
     一个gradle插件，可以编译项目中的智能合约，并拷贝到对应包目录下。 
+
+    - **SmartDev-Scaffold 应用开发脚手架** 
+    用于根据智能合约文件，生成应用项目，里面包含了合约函数对应的实体类、服务类等内容。 
 
 .. toctree::
    :maxdepth: 3
@@ -29,6 +30,7 @@ WeBankBlockchain-SmartDev 技术文档
    ./docs/WeBankBlockchain-SmartDev-Contract/index.md
    ./docs/WeBankBlockchain-SmartDev-SCGP/index.md
    ./docs/WeBankBlockchain-SmartDev-Scaffold/index.md
+   ./docs/appendix.md
 .. 
 
 

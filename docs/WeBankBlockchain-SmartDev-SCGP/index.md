@@ -13,5 +13,4 @@
    :maxdepth: 3
    
    intro.md
-   appendix.md
 ```
