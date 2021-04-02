@@ -28,7 +28,7 @@ git clone https://github.com/WeBankBlockchain/SmartDev-Scaffold.git
 或者从gitee下载：
 
 ```
-https://gitee.com/WeBankBlockchain/SmartDev-Scaffold.git
+git clone https://gitee.com/WeBankBlockchain/SmartDev-Scaffold.git
 ```
 
 进入目录：
