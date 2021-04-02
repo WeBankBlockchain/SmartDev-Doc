@@ -8,10 +8,10 @@
 
 | 依赖软件 | 说明 |备注|
 | --- | --- | --- |
-| FISCO-BCOS | >= 2.7.1 | |
-| Java | JDK[1.8] | |
+| Java |>= JDK[1.8] | |
 | Solidity | 0.4.25 | |
 | Git | 下载安装包需要使用Git | |
+| Gradle | >=6.0.1| |
 
 
 
@@ -23,12 +23,12 @@
 从gitub下载脚手架：
 
 ```
-https://github.com/WeBankBlockchain/SmartDev-Contract.git
+git clone https://github.com/WeBankBlockchain/SmartDev-Scaffold.git
 ```
 或者从gitee下载：
 
 ```
-https://gitee.com/WeBankBlockchain/SmartDev-Contract.git
+https://gitee.com/WeBankBlockchain/SmartDev-Scaffold.git
 ```
 
 进入目录：

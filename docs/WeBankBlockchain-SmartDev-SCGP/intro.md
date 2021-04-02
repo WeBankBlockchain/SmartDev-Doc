@@ -8,9 +8,12 @@
 
 | 依赖软件 | 说明 |备注|
 | --- | --- | --- |
-| Solidity | >= 0.4.25 ||
-| Java | JDK[1.8] | |
-| Git | 下载代码需要使用Git | |
+| Java |>= JDK[1.8] | |
+| Solidity | 0.4.25 | |
+| Git | 下载安装包需要使用Git | |
+| Gradle | >=6.0.1| |
+
+
 
 ## 快速开始
 
@@ -22,7 +25,7 @@
 
 ### 插件配置
 
-业务方只需要在build.gradle中引入插件：
+业务方需要在build.gradle中引入插件：
 
 ```
 buildscript {
