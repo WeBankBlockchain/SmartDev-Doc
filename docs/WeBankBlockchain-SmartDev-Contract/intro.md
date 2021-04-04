@@ -12,12 +12,12 @@
 通过github下载源码：
 
 ```
-https://github.com/WeBankBlockchain/SmartDev-Contract.git
+git clone https://github.com/WeBankBlockchain/SmartDev-Contract.git
 ```
 或者从gitee下载：
 
 ```
-https://gitee.com/WeBankBlockchain/SmartDev-Contract.git
+git clone https://gitee.com/WeBankBlockchain/SmartDev-Contract.git
 ```
 
 具体使用方式请参考后文文档。
