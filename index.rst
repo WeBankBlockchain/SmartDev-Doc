@@ -2,9 +2,9 @@
 WeBankBlockchain-SmartDev 技术文档
 ##############################################################
 
-.. admonition:: 什么是 WeBankBlockchain-SmartDev
+.. admonition:: 什么是 WeBankBlockchain-SmartDev?
 
-    SmartDev的初衷是全方位助力开发者高效、敏捷的开发区块链应用。SmartDev包含了一套开放、轻量的开发组件集，覆盖合约的开发、调试、应用开发各个环节，开发者可根据自己的情况选择相应开发工具，提升开发效率。
+    WeBankBlockchain-SmartDev的初衷是全方位助力开发者高效、敏捷地开发区块链应用。SmartDev包含了一套开放、轻量的开发组件集，覆盖合约的开发、调试、应用开发各个环节，开发者可根据自己的情况选择相应开发工具，提升开发效率。
 
 .. admonition:: 设计目标
 
