@@ -65,3 +65,8 @@ git clone https://gitee.com/WeBankBlockchain/SmartDev-Contract.git
 |Evidence|存证|存证场景相关操作，上传、审批、修改、删除等|[API](./api/business_template/Evidence.html)|
 |RewardPoint|积分|积分场景相关操作，发行、转移等|[API](./api/business_template/RewardPoint.html)|
 
+
+## 更多合约库功能
+如项目对您有帮助，欢迎点亮我们右上角的[小星星](https://github.com/WeBankBlockchain/SmartDev-Contract)。
+
+更多合约库的功能，欢迎[提交代码](https://github.com/WeBankBlockchain/SmartDev-Contract/pulls)。
