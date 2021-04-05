@@ -19,7 +19,7 @@ WeBankBlockchain-SmartDev 技术文档
     - **SmartDev-Contract  智能合约库** 
     solidity智能合约代码库。包含基础类型、数据结构、通用功能、上层业务等智能合约库。用户可根据实际需求进行参考、复用。
 
-    - **SmartDev-SCGP (Solidity Compiler Gradle Plugin) 合约编译插件** 
+    - **SmartDev-SCGP (Solidity Compiler Gradle Plugin) 智能合约编译插件** 
     将solidity智能合约代码编译为Java代码的gradle插件，可以编译项目中的智能合约，生成对应的Java文件，并自动拷贝到对应包目录下。 
 
     - **SmartDev-Scaffold 应用开发脚手架** 
