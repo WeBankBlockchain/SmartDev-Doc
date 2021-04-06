@@ -7,24 +7,24 @@ WeBankBlockchain-SmartDev区块链应用开发组件[文档](https://toolkit-doc
 请参考:  
 - [Github地址](https://github.com/WeBankBlockchain/SmartDev-Contract)
 - [Gitee地址](https://gitee.com/WeBankBlockchain/SmartDev-Contract)
-- [文档](https://toolkit-doc.readthedocs.io/zh_CN/latest/docs/WeBankBlockchain-SmartDev-Contract/intro.html)
-- [快速开始](https://toolkit-doc.readthedocs.io/zh_CN/latest/docs/WeBankBlockchain-SmartDev-Contract/quick_start.html)
+- [文档](https://smartdev-doc.readthedocs.io/zh_CN/latest/docs/WeBankBlockchain-SmartDev-Contract/intro.html)
+- [快速开始](https://smartdev-doc.readthedocs.io/zh_CN/latest/docs/WeBankBlockchain-SmartDev-Contract/quick_start.html)
 
 ### **WeBankBlockchain-SmartDev-SCGP  合约编译插件** 
 支持通过gradle指令将项目中的智能合约编译为abi、bin、java合约，不必再依赖控制台执行编译。
 请参考:  
 - [Github地址](https://github.com/WeBankBlockchain/SmartDev-SCGP)
 - [Gitee地址](https://gitee.com/WeBankBlockchain/SmartDev-SCGP)
-- [文档](https://toolkit-doc.readthedocs.io/zh_CN/latest/docs/WeBankBlockchain-SmartDev-SCGP/index.html)
-- [快速开始](https://toolkit-doc.readthedocs.io/zh_CN/latest/docs/WeBankBlockchain-SmartDev-SCGP/index.html)
+- [文档](https://smartdev-doc.readthedocs.io/zh_CN/latest/docs/WeBankBlockchain-SmartDev-SCGP/index.html)
+- [快速开始](https://smartdev-doc.readthedocs.io/zh_CN/latest/docs/WeBankBlockchain-SmartDev-SCGP/index.html)
     
 ### **WeBankBlockchain-SmartDev-Scaffold  应用开发脚手架**
 支持将智能合约转换为区块链应用项目，提高应用开发效率。
 请参考:  
 - [Github地址](https://github.com/WeBankBlockchain/SmartDev-Scaffold)
 - [Gitee地址](https://gitee.com/WeBankBlockchain/SmartDev-Scaffold)
-- [文档](https://toolkit-doc.readthedocs.io/zh_CN/latest/docs/WeBankBlockchain-SmartDev-Scaffold/index.html)
-- [快速开始](https://toolkit-doc.readthedocs.io/zh_CN/latest/docs/WeBankBlockchain-SmartDev-Scaffold/index.html)	
+- [文档](https://smartdev-doc.readthedocs.io/zh_CN/latest/docs/WeBankBlockchain-SmartDev-Scaffold/index.html)
+- [快速开始](https://smartdev-doc.readthedocs.io/zh_CN/latest/docs/WeBankBlockchain-SmartDev-Scaffold/index.html)	
 
 ## 贡献代码
 欢迎参与本项目的社区建设：
