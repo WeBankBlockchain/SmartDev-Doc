@@ -78,7 +78,53 @@ bash run.sh
 ```
 其中生成项目的具体内容如下：
 
-![](image/Sample.png)
+```
+.
+├── build.gradle
+├── gradle
+│   └── wrapper
+│       ├── gradle-wrapper.jar
+│       └── gradle-wrapper.properties
+├── settings.gradle
+└── src
+    ├── main
+    │   ├── contracts
+    │   │   └── HelloWorld.sol
+    │   ├── java
+    │   │   └── org
+    │   │       └── example
+    │   │           └── demo
+    │   │               ├── Application.java
+    │   │               ├── config
+    │   │               │   ├── ContractConfig.java
+    │   │               │   ├── SdkBeanConfig.java
+    │   │               │   └── SystemConfig.java
+    │   │               ├── model
+    │   │               │   ├── CommonResponse.java
+    │   │               │   └── bo
+    │   │               │       └── HelloWorldSetInputBO.java
+    │   │               ├── service
+    │   │               │   └── HelloWorldService.java
+    │   │               └── utils
+    │   │                   └── IOUtil.java
+    │   └── resources
+    │       ├── abi
+    │       │   └── HelloWorld.abi
+    │       ├── application.properties
+    │       ├── bin
+    │       │   ├── ecc
+    │       │   │   └── HelloWorld.bin
+    │       │   └── sm
+    │       │       └── HelloWorld.bin
+    │       └── conf
+    └── test
+        └── java
+            ├── org
+            │   └── example
+            │       └── demo
+            │           └── DemoPkey.java
+            └── org.example.demo
+```
 
 其中：
 - config目录包含Bean配置类
