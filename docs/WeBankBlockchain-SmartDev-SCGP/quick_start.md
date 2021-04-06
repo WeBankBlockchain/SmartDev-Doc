@@ -43,6 +43,8 @@ apply plugin: 'solc-gradle-plugin'
 solc{
     pkg = 'org.example.contracts'
 }
+```
+
 插件的完整配置如下：
 
 | 配置项 | 必选 | 说明 |
@@ -52,7 +54,6 @@ solc{
 | output | 否 | 编译输出路径，默认为src/main |
 | onlyAbiBin | 否 | 是否只输出abi和bin默认false， |
 
-```
 
 ## 编译合约
 
