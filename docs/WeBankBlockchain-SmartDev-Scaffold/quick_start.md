@@ -146,11 +146,12 @@ system.peers=127.0.0.1:20200,127.0.0.1:20201
 ### Required
 system.groupId=1
 ### Optional. Default will search conf,config,src/main/conf/src/main/config
-system.certPath=conf,config,src/main/conf,src/main/config
+system.certPath=conf,config,src/main/resources/conf,src/main/resources/config
 ### Optional. If don't specify a random private key will be used
 system.hexPrivateKey=
 ### Optional. Please fill this address if you want to use related service
-system.contract.helloWorldAddress=
+contract.helloWorldAddress=
+server.port=8080
 
 ```
 其中system.peers更换成实际的链节点监听地址；system.helloWorldAddress更换成前面部署过的合约地址。
