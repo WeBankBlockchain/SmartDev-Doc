@@ -13,7 +13,7 @@
 
 
 ## 下载脚手架
-从gitub下载脚手架：
+从github下载脚手架：
 
 ```
 git clone https://github.com/WeBankBlockchain/SmartDev-Scaffold.git
