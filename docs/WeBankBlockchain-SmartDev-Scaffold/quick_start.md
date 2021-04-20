@@ -24,10 +24,9 @@ curl -LO https://github.com/WeBankBlockchain/SmartDev-Scaffold/releases/download
 unzip SmartDev-Scaffold*.zip
 ```
 
-或者从gitee下载：
-
-```
-git clone https://gitee.com/WeBankBlockchain/SmartDev-Scaffold.git
+```eval_rst
+.. note::
+    - 如果因为网络问题导致长时间无法下载，请尝试：git clone https://gitee.com/WeBankBlockchain/SmartDev-Scaffold.git
 ```
 
 进入目录：
