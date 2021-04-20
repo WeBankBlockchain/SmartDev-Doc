@@ -7,7 +7,7 @@ LibQueue提供了FIFO队列数据结构。
 首先需要通过import引入LibQueue类库，然后通过"."进行方法调用，如下为调用LibQueue方法的例子：
 
 ```
-pragma solidity >=0.4.24 <0.6.11;
+pragma solidity ^0.4.25;
 
 import "./LibQueue.sol";
 
@@ -54,7 +54,7 @@ contract Test {
 #### 实例
 
 ```
-pragma solidity >=0.4.24 <0.6.11;
+pragma solidity ^0.4.25;
 
 import "./LibQueue.sol";
 
@@ -88,7 +88,7 @@ contract Test {
 #### 实例
 
 ```
-pragma solidity >=0.4.24 <0.6.11;
+pragma solidity ^0.4.25;
 
 import "./LibQueue.sol";
 
@@ -142,7 +142,7 @@ contract Test {
 #### 实例
 
 ```
-pragma solidity >=0.4.24 <0.6.11;
+pragma solidity ^0.4.25;
 
 import "./LibQueue.sol";
 

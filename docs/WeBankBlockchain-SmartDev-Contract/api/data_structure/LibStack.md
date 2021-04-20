@@ -8,7 +8,7 @@ LibStack提供了栈数据结构。
 
 ```
 
-pragma solidity >=0.4.24 <0.6.11;
+pragma solidity ^0.4.25;
 
 import "./LibStack.sol";
 
@@ -57,7 +57,7 @@ contract Test {
 #### 实例
 
 ```
-pragma solidity >=0.4.24 <0.6.11;
+pragma solidity ^0.4.25;
 
 import "./LibStack.sol";
 
@@ -92,7 +92,7 @@ contract Test {
 
 ```
 
-pragma solidity >=0.4.24 <0.6.11;
+pragma solidity ^0.4.25;
 
 import "./LibStack.sol";
 
@@ -129,7 +129,7 @@ contract Test {
 
 ```
 
-pragma solidity >=0.4.24 <0.6.11;
+pragma solidity ^0.4.25;
 
 import "./LibStack.sol";
 

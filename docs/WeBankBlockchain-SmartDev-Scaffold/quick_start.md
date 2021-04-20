@@ -13,11 +13,17 @@
 
 
 ## 下载脚手架
-从gitub下载脚手架：
+从github下载脚手架：
 
 ```
-git clone https://github.com/WeBankBlockchain/SmartDev-Scaffold.git
+curl -LO https://github.com/WeBankBlockchain/SmartDev-Scaffold/releases/download/V1.0.0/SmartDev-Scaffold-V1_0_0.zip
 ```
+
+下载成功后，手动或用命令行解压压缩包：
+```
+unzip SmartDev-Scaffold*.zip
+```
+
 或者从gitee下载：
 
 ```
@@ -146,11 +152,12 @@ system.peers=127.0.0.1:20200,127.0.0.1:20201
 ### Required
 system.groupId=1
 ### Optional. Default will search conf,config,src/main/conf/src/main/config
-system.certPath=conf,config,src/main/conf,src/main/config
+system.certPath=conf,config,src/main/resources/conf,src/main/resources/config
 ### Optional. If don't specify a random private key will be used
 system.hexPrivateKey=
 ### Optional. Please fill this address if you want to use related service
-system.contract.helloWorldAddress=
+contract.helloWorldAddress=
+server.port=8080
 
 ```
 其中system.peers更换成实际的链节点监听地址；system.helloWorldAddress更换成前面部署过的合约地址。
