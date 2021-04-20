@@ -16,8 +16,14 @@
 从github下载脚手架：
 
 ```
-git clone https://github.com/WeBankBlockchain/SmartDev-Scaffold.git
+curl -LO https://github.com/WeBankBlockchain/SmartDev-Scaffold/releases/download/V1.0.0/SmartDev-Scaffold-V1_0_0.zip
 ```
+
+下载成功后，手动或用命令行解压压缩包：
+```
+unzip SmartDev-Scaffold*.zip
+```
+
 或者从gitee下载：
 
 ```
