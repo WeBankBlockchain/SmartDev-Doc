@@ -10,15 +10,21 @@
 
 ## 如何获取
 
-通过github下载源码：
+通过github下载[源码](https://github.com/WeBankBlockchain/SmartDev-Contract/releases/download/V1.0.0/SmartDev-Contract-V1_0_0.zip)：
 
 ```
-git clone https://github.com/WeBankBlockchain/SmartDev-Contract.git
+curl -LO https://github.com/WeBankBlockchain/SmartDev-Contract/releases/download/V1.0.0/SmartDev-Contract-V1_0_0.zip
 ```
-或者从gitee下载：
 
+
+下载成功后，手动或用命令行解压压缩包：
 ```
-git clone https://gitee.com/WeBankBlockchain/SmartDev-Contract.git
+unzip SmartDev-Contract*.zip
+```
+
+```eval_rst
+.. note::
+    - 如果因为网络问题导致长时间无法下载，请尝试：git clone https://gitee.com/WeBankBlockchain/SmartDev-Contract.git
 ```
 
 具体使用方式请参考下文章节中的详细的API。
