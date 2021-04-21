@@ -13,7 +13,7 @@
 
 
 ## 下载脚手架
-从github下载脚手架：
+从github下载[脚手架](https://github.com/WeBankBlockchain/SmartDev-Scaffold/releases/download/V1.0.0/SmartDev-Scaffold-V1_0_0.zip)：
 
 ```
 curl -LO https://github.com/WeBankBlockchain/SmartDev-Scaffold/releases/download/V1.0.0/SmartDev-Scaffold-V1_0_0.zip
