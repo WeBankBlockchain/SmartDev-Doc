@@ -9,7 +9,7 @@
 | Java |>= JDK[1.8] | |
 | Solidity | 0.4.25 | |
 | Git | 下载安装包需要使用Git | |
-| Gradle | >=6.0.1| |
+| Gradle | 大于6 小于7|使用gradle7会报错 |
 
 
 ## 下载脚手架
