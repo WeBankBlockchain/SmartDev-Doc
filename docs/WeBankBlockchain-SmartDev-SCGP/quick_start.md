@@ -57,7 +57,7 @@ solc{
 | contracts | 否 | 智能合约文件路径，默认为src/main/contracts |
 | output | 否 | 编译输出路径，默认为src/main |
 | onlyAbiBin | 否 | 是否只输出abi和bin默认false|
-| selector|否|默认为*，选择所有合约；若选择指定合约，可填所需合约文件名称，按逗号分隔，例如A.sol,B.sol|
+| selector|否|默认为空，选择所有合约；若选择指定合约，可填所需合约文件名称，按逗号分隔，例如A.sol,B.sol|
 
 
 ## 编译合约
