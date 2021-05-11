@@ -41,11 +41,12 @@ tools目录包含了执行环境，其结构为：
 │   ├──|── HelloWorld.sol
 │   ├── config.ini
 │   ├── run.sh
+│   ├── run.bat
 ```
 其中：
 - contracts目录用于存放solidity合约文件，脚手架后续会读取该目录下的合约以生成对应的业务工程。请删除该目录下的默认合约，并将自己的业务合约拷贝到该目录下。
 - config.ini是启动相关配置。
-- run.sh是启动脚本
+- run.sh和run.bat分别是unix和windows下的启动脚本。
 
 ## 配置脚手架
 ### 合约配置
@@ -58,8 +59,10 @@ tools目录包含了执行环境，其结构为：
 artifact=demo
 ### 组名称
 group=org.example
-### 所支持的合约列表，通常为空即可
+### 所支持的合约列表，默认为空表示选择所有合约
 selector=
+### solidity编译器版本，可选0.4.25.1, 0.5.2.0, 0.6.10.0三种
+compiler=0.4.25.1
 ```
 
 关于selector，如果需要只为指定合约进行编译输出，可以输入所需要的合约列表，按逗号分隔。例如下述代码中，只为AccountController,RoleController这两个合约：
@@ -69,7 +72,7 @@ selector=AccountController,RoleController
 ```
 
 ## 运行脚手架
-可以直接启动脚本：
+可以直接启动脚本（unix系统为例）
 ```
 chmod +x run.sh
 bash run.sh
@@ -79,6 +82,7 @@ bash run.sh
 ```
 ├─contracts
 ├─run.sh
+├─run.bat
 └─demo
 ```
 其中生成项目的具体内容如下：
