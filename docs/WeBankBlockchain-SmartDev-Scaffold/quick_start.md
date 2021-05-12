@@ -146,7 +146,7 @@ bash run.sh
 ## DAPP开发
 这里介绍DAPP开发过程，以前面生成的demo项目工程为例。
 ### 部署合约
-使用控制台部署HelloWorld合约
+使用控制台部署HelloWorld合约,或者使用部署工具
 ### 证书拷贝
 请将配置文件拷贝到生成工程的conf目录或src/main/resources/conf目录下。该业务工程会自动在这些路径下搜索证书。
 ### 配置连接节点
@@ -165,7 +165,11 @@ contract.helloWorldAddress=
 server.port=8080
 
 ```
-其中system.peers更换成实际的链节点监听地址；system.helloWorldAddress更换成前面部署过的合约地址。
+注意：
+- system.peers更换成实际的链节点监听地址；
+- system.helloWorldAddress更换成前面部署过的合约地址，该地址可通过控制台或快捷工具
+
+system.hexPrivateKey可以见使用快捷工具生成；如果为空，系统内部会生成一个随机私钥。
 
 ### 补全业务
 一个完整的DAPP应包含至少三层架构，本示例补全一个Controller。
@@ -218,11 +222,45 @@ http://127.0.0.1:8080/hello/get
 ```
 ["hello"]
 ```
-### 其他
-当用户基于生成的项目进行开发时，若需要修改合约，可在项目工程目录下直接编译合约：
+### 快捷工具的使用
+当用户需要部署合约、生成私钥等功能时，可以使用相关命令。
+
+#### 合约部署
+
+部署合约的快捷工具:
 ```
-cd [demo directory]
-gradle solc
+java -jar [工程jar包] deploy [合约名称] [参数列表]
+```
+例如，部署HelloWorld:
+```
+java -jar demo-exec.jar deploy HelloWorld
+```
+可以在日志尾部看到地址：
+```
+...
+2021-05-12 21:38:14.657  INFO 10232 --- [           main] o.f.b.s.a.wrapper.ABIDefinitionFactory   :  contractABIDefinition org.fisco.bcos.sdk.abi.wrapper.ContractABIDefinition@6f5d0190 
+2021-05-12 21:38:14.659  INFO 10232 --- [           main] o.f.b.sdk.abi.wrapper.ABIObjectFactory   :  name: null
+2021-05-12 21:38:15.064  INFO 10232 --- [           main] org.example.demo.tool.DeployTool         : deploy address:0x587122b6804b68fe1d8e9ab8711ce2570fd19a52
+```
+#### 私钥生成
+
+私钥生成的快捷工具：
+```
+java -jar [工程jar包] key
+```
+该工具会为国密、非国密各生成一个密钥对。
+
+例如：
+```
+java -jar demo-exec.jar key
+```
+可以在日志尾部看到地址：
+```
+2021-05-12 21:36:40.652  INFO 36044 --- [           main] org.example.demo.tool.KeyTool            : ecdsa private key :bd79e88f9538f2f90654f5504b91f7266757680de5b8cecc5265942a36bbdb5e
+2021-05-12 21:36:40.652  INFO 36044 --- [           main] org.example.demo.tool.KeyTool            : ecdsa public key :047d101a4ef9de322d17ef6da7c02c21e9424e38be4be9117a3ac064d3b119ccb5aa116c8e725117bc8e99a7214c7198447796c2aa78fc5211615a03ce4b4ca762
+2021-05-12 21:36:40.653  INFO 36044 --- [           main] org.example.demo.tool.KeyTool            : ecdsa address :0x3ab6411439d9f851b3f7b801da01ef4bc7fa6c72
+2021-05-12 21:36:40.995  INFO 36044 --- [           main] org.example.demo.tool.KeyTool            : sm2 private key :4af94cc052f56bd0e9a7d6ff50bf8bb09c8d219176f1978bfe6ae3449aca57d1
+2021-05-12 21:36:40.995  INFO 36044 --- [           main] org.example.demo.tool.KeyTool            : sm2 public key :0457a96ff57a154649dfa2ce1ef783ec2dafd211e80ddb6f1fb6290835e3f9ef77f144632fea4d28e154311f22fa7e9a0f44843f1891c84a8cb8bd5861b0b13fda
+2021-05-12 21:36:40.995  INFO 36044 --- [           main] org.example.demo.tool.KeyTool            : sm2 address :0x17481a7e309a5b4790dca1cd2a9ac84b9cda5631
 ```
 
-新的abi、bin会被刷新到src/main/resources目录下，但相关Service类和BO类并不会被重新生成，需要用户自行修改。
