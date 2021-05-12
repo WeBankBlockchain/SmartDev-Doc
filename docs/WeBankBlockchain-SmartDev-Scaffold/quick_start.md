@@ -63,6 +63,8 @@ group=org.example
 selector=
 ### solidity编译器版本，可选0.4.25.1, 0.5.2.0, 0.6.10.0三种
 compiler=0.4.25.1
+### gradle版本，支持5.6.1、gradle 6各版本。暂不支持gradle7
+gradleVersion=6.3
 ```
 
 关于selector，如果需要只为指定合约进行编译输出，可以输入所需要的合约列表，按逗号分隔。例如下述代码中，只为AccountController,RoleController这两个合约：
