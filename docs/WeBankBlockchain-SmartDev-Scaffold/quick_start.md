@@ -107,17 +107,18 @@ bash run.sh
     │   │           └── demo
     │   │               ├── Application.java
     │   │               ├── config
+    │   │               │   ├── BcosConfig.java
     │   │               │   ├── ContractConfig.java
     │   │               │   ├── SdkBeanConfig.java
     │   │               │   └── SystemConfig.java
+    │   │               ├── constants
+    │   │               │   ├── ContractConstants.java
     │   │               ├── model
     │   │               │   ├── CommonResponse.java
     │   │               │   └── bo
     │   │               │       └── HelloWorldSetInputBO.java
     │   │               ├── service
     │   │               │   └── HelloWorldService.java
-    │   │               └── utils
-    │   │                   └── IOUtil.java
     │   └── resources
     │       ├── abi
     │       │   └── HelloWorld.abi
@@ -133,7 +134,7 @@ bash run.sh
             ├── org
             │   └── example
             │       └── demo
-            │           └── DemoPkey.java
+            │           └── Demos.java
             └── org.example.demo
 ```
 
@@ -142,30 +143,44 @@ bash run.sh
 - service目录中包含了智能合约访问的Service类，一个类对应一个合约。
 - bo目录包含了合约函数输入参数的封装POJO类。
 - src/main/resource/conf目录用于存放证书信息
+- Demos.java包含了私钥生成、部署合约等示例代码
 
 ## DAPP开发
 这里介绍DAPP开发过程，以前面生成的demo项目工程为例。
 ### 部署合约
 使用控制台部署HelloWorld合约
 ### 证书拷贝
-请将配置文件拷贝到生成工程的conf目录或src/main/resources/conf目录下。该业务工程会自动在这些路径下搜索证书。
+请将配置文件拷贝到生成工程的conf目录或src/main/resources/conf目录下。
 ### 配置连接节点
 请修改application.properties，该文件包含如下信息：
 ```
-### Required
-system.peers=127.0.0.1:20200,127.0.0.1:20201
-### Required
+### Java sdk configuration
+cryptoMaterial.certPath=conf
+network.peers[0]=127.0.0.1:20200
+#network.peers[1]=127.0.0.1:20201
+
+### System configuration
 system.groupId=1
-### Optional. Default will search conf,config,src/main/conf/src/main/config
-system.certPath=conf,config,src/main/resources/conf,src/main/resources/config
-### Optional. If don't specify a random private key will be used
-system.hexPrivateKey=
-### Optional. Please fill this address if you want to use related service
+system.privateKey=
+
+### Contract configuration
 contract.helloWorldAddress=
+
+### Springboot configuration
 server.port=8080
+server.session.timeout=60
+banner.charset=UTF-8
+spring.jackson.date-format=yyyy-MM-dd HH:mm:ss
+spring.jackson.time-zone=GMT+8
+
 
 ```
-其中system.peers更换成实际的链节点监听地址；system.helloWorldAddress更换成前面部署过的合约地址。
+其中：
+- java sdk configuration配置部分与[javasdk](https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/sdk/java_sdk/configuration.html)配置一致。
+    * 其中需要用户将network.peers[0]=127.0.0.1:20200更换成实际的链节点监听地址。
+- System configuration包含群组、私钥等配置。
+    * system.hexPrivateKey是16禁止的私钥明文。如果该选项不做配置，会走java sdk配置对应的私钥；如果私钥做了配置，那么会覆盖java sdk的私钥。
+- Contract confguration包含合约配置，用户需要更换成前面部署过的合约地址。
 
 ### 补全业务
 一个完整的DAPP应包含至少三层架构，本示例补全一个Controller。
