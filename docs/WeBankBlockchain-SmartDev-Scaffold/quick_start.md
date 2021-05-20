@@ -179,7 +179,7 @@ spring.jackson.time-zone=GMT+8
 - java sdk configuration配置部分与[javasdk](https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/sdk/java_sdk/configuration.html)配置一致。
     * 其中需要用户将network.peers[0]=127.0.0.1:20200更换成实际的链节点监听地址。
 - System configuration包含群组、私钥等配置。
-    * system.hexPrivateKey是16禁止的私钥明文。如果该选项不做配置，会走java sdk配置对应的私钥；如果私钥做了配置，那么会覆盖java sdk的私钥。
+    * system.hexPrivateKey是16进制的私钥明文。如果为空，会采用上述java sdk配置对应的私钥，若上述sdk也未配置，则随机生成一个
 - Contract confguration包含合约配置，用户需要更换成前面部署过的合约地址。
 
 ### 补全业务
