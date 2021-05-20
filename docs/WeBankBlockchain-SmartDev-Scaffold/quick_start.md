@@ -186,13 +186,23 @@ spring.jackson.time-zone=GMT+8
 一个完整的DAPP应包含至少三层架构，本示例补全一个Controller。
 在org.example.controller下新建一个Controller类，如下：
 ```
+package org.example.demo.controller;
+
+import org.example.demo.model.bo.HelloWorldSetInputBO;
+import org.example.demo.service.HelloWorldService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
 @RestController
 @RequestMapping("hello")
 public class HelloController {
 
     @Autowired
     private HelloWorldService service;
-    
+
     @GetMapping("set")
     public String set(@RequestParam("n") String n) throws Exception{
         HelloWorldSetInputBO input = new HelloWorldSetInputBO(n);
