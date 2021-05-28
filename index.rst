@@ -27,12 +27,15 @@ WeBankBlockchain-SmartDev 技术文档
     - **SmartDev-Scaffold 应用开发脚手架** 
     基于配置的智能合约文件，自动生成应用项目的脚手架代码，包含了智能合约所对应的实体类、服务类等内容，帮助用户只需要修改和编写较少量的代码，即可实现一个应用，大大简化了智能合约开发。 
 
+
 .. toctree::
+   :hidden:
    :maxdepth: 3
 
    ./docs/WeBankBlockchain-SmartDev-Contract/index.md
    ./docs/WeBankBlockchain-SmartDev-SCGP/index.md
    ./docs/WeBankBlockchain-SmartDev-Scaffold/index.md
+   ./docs/all_projects.rst
    ./docs/appendix.md
 .. 
 
