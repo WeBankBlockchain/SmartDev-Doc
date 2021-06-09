@@ -9,7 +9,7 @@
 | Java |>= JDK[1.8] | |
 | Solidity | 0.4.25 | |
 | Git | 下载安装包需要使用Git | |
-| Gradle | >=6.0.1| |
+| Gradle | 大于6 小于7|使用gradle7会报错 |
 
 
 ## 下载脚手架
@@ -41,11 +41,12 @@ tools目录包含了执行环境，其结构为：
 │   ├──|── HelloWorld.sol
 │   ├── config.ini
 │   ├── run.sh
+│   ├── run.bat
 ```
 其中：
 - contracts目录用于存放solidity合约文件，脚手架后续会读取该目录下的合约以生成对应的业务工程。请删除该目录下的默认合约，并将自己的业务合约拷贝到该目录下。
 - config.ini是启动相关配置。
-- run.sh是启动脚本
+- run.sh和run.bat分别是unix和windows下的启动脚本。
 
 ## 配置脚手架
 ### 合约配置
@@ -58,8 +59,12 @@ tools目录包含了执行环境，其结构为：
 artifact=demo
 ### 组名称
 group=org.example
-### 所支持的合约列表，通常为空即可
+### 所支持的合约列表，默认为空表示选择所有合约
 selector=
+### solidity编译器版本，可选0.4.25.1, 0.5.2.0, 0.6.10.0三种
+compiler=0.4.25.1
+### gradle版本，支持5.6.1、gradle 6各版本。暂不支持gradle7
+gradleVersion=6.3
 ```
 
 关于selector，如果需要只为指定合约进行编译输出，可以输入所需要的合约列表，按逗号分隔。例如下述代码中，只为AccountController,RoleController这两个合约：
@@ -69,7 +74,7 @@ selector=AccountController,RoleController
 ```
 
 ## 运行脚手架
-可以直接启动脚本：
+可以直接启动脚本（unix系统为例）
 ```
 chmod +x run.sh
 bash run.sh
@@ -79,6 +84,7 @@ bash run.sh
 ```
 ├─contracts
 ├─run.sh
+├─run.bat
 └─demo
 ```
 其中生成项目的具体内容如下：
@@ -101,17 +107,18 @@ bash run.sh
     │   │           └── demo
     │   │               ├── Application.java
     │   │               ├── config
+    │   │               │   ├── BcosConfig.java
     │   │               │   ├── ContractConfig.java
     │   │               │   ├── SdkBeanConfig.java
     │   │               │   └── SystemConfig.java
+    │   │               ├── constants
+    │   │               │   ├── ContractConstants.java
     │   │               ├── model
     │   │               │   ├── CommonResponse.java
     │   │               │   └── bo
     │   │               │       └── HelloWorldSetInputBO.java
     │   │               ├── service
     │   │               │   └── HelloWorldService.java
-    │   │               └── utils
-    │   │                   └── IOUtil.java
     │   └── resources
     │       ├── abi
     │       │   └── HelloWorld.abi
@@ -127,7 +134,7 @@ bash run.sh
             ├── org
             │   └── example
             │       └── demo
-            │           └── DemoPkey.java
+            │           └── Demos.java
             └── org.example.demo
 ```
 
@@ -136,42 +143,66 @@ bash run.sh
 - service目录中包含了智能合约访问的Service类，一个类对应一个合约。
 - bo目录包含了合约函数输入参数的封装POJO类。
 - src/main/resource/conf目录用于存放证书信息
+- Demos.java包含了私钥生成、部署合约等示例代码
 
 ## DAPP开发
 这里介绍DAPP开发过程，以前面生成的demo项目工程为例。
 ### 部署合约
 使用控制台部署HelloWorld合约
 ### 证书拷贝
-请将配置文件拷贝到生成工程的conf目录或src/main/resources/conf目录下。该业务工程会自动在这些路径下搜索证书。
+请将配置文件拷贝到生成工程的conf目录或src/main/resources/conf目录下。
 ### 配置连接节点
 请修改application.properties，该文件包含如下信息：
 ```
-### Required
-system.peers=127.0.0.1:20200,127.0.0.1:20201
-### Required
+### Java sdk configuration
+cryptoMaterial.certPath=conf
+network.peers[0]=127.0.0.1:20200
+#network.peers[1]=127.0.0.1:20201
+
+### System configuration
 system.groupId=1
-### Optional. Default will search conf,config,src/main/conf/src/main/config
-system.certPath=conf,config,src/main/resources/conf,src/main/resources/config
-### Optional. If don't specify a random private key will be used
-system.hexPrivateKey=
-### Optional. Please fill this address if you want to use related service
+system.privateKey=
+
+### Contract configuration
 contract.helloWorldAddress=
+
+### Springboot configuration
 server.port=8080
+server.session.timeout=60
+banner.charset=UTF-8
+spring.jackson.date-format=yyyy-MM-dd HH:mm:ss
+spring.jackson.time-zone=GMT+8
+
 
 ```
-其中system.peers更换成实际的链节点监听地址；system.helloWorldAddress更换成前面部署过的合约地址。
+其中：
+- java sdk configuration配置部分与[javasdk](https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/sdk/java_sdk/configuration.html)配置一致。
+    * 其中需要用户将network.peers[0]=127.0.0.1:20200更换成实际的链节点监听地址。
+- System configuration包含群组、私钥等配置。
+    * system.hexPrivateKey是16进制的私钥明文。如果为空，会采用上述java sdk配置对应的私钥，若上述sdk也未配置，则随机生成一个
+- Contract confguration包含合约配置，用户需要更换成前面部署过的合约地址。
 
 ### 补全业务
 一个完整的DAPP应包含至少三层架构，本示例补全一个Controller。
 在org.example.controller下新建一个Controller类，如下：
 ```
+package org.example.demo.controller;
+
+import org.example.demo.model.bo.HelloWorldSetInputBO;
+import org.example.demo.service.HelloWorldService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
 @RestController
 @RequestMapping("hello")
 public class HelloController {
 
     @Autowired
     private HelloWorldService service;
-    
+
     @GetMapping("set")
     public String set(@RequestParam("n") String n) throws Exception{
         HelloWorldSetInputBO input = new HelloWorldSetInputBO(n);
