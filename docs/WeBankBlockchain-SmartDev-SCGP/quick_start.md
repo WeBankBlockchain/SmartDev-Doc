@@ -29,7 +29,7 @@ buildscript {
         mavenLocal()
     }
     dependencies {
-        classpath 'com.webank:solc-gradle-plugin:1.0.0'
+        classpath 'com.webank:solc-gradle-plugin:1.0.1'
         //默认编译0.4.25版本，如果想编译0.6.10.0版本，请添加下述依赖
         //classpath 'org.fisco-bcos:solcJ:0.6.10.0'
         //默认编译0.4.25版本，如果想编译0.5.2.0版本，请添加下述依赖
