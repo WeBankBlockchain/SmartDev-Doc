@@ -13,10 +13,10 @@
 
 
 ## 下载脚手架
-从github下载[脚手架](https://github.com/WeBankBlockchain/SmartDev-Scaffold/releases/download/V1.0.0/SmartDev-Scaffold-V1_0_0.zip)：
+从github下载[脚手架](https://github.com/WeBankBlockchain/SmartDev-Scaffold/releases/download/V1.0.1/SmartDev-Scaffold-V1_0_1.zip)：
 
 ```
-curl -LO https://github.com/WeBankBlockchain/SmartDev-Scaffold/releases/download/V1.0.0/SmartDev-Scaffold-V1_0_0.zip
+curl -LO https://github.com/WeBankBlockchain/SmartDev-Scaffold/releases/download/V1.0.1/SmartDev-Scaffold-V1_0_1.zip
 ```
 
 下载成功后，手动或用命令行解压压缩包：
