@@ -10,7 +10,7 @@
 | Solidity | 0.4.25 | |
 | Git | 下载安装包需要使用Git | |
 | Gradle | 大于6 小于7|使用gradle7会报错 |
-
+| Maven | |如果要生成maven工程则需要 |
 
 ## 下载脚手架
 从github下载[脚手架](https://github.com/WeBankBlockchain/SmartDev-Scaffold/releases/download/V1.0.1/SmartDev-Scaffold-V1_0_1.zip)：
@@ -63,7 +63,9 @@ group=org.example
 selector=
 ### solidity编译器版本，可选0.4.25.1, 0.5.2.0, 0.6.10.0三种
 compiler=0.4.25.1
-### gradle版本，支持5.6.1、gradle 6各版本。暂不支持gradle7
+### 工程生成类型，可以设置为gradle或maven
+type=gradle
+### gradle版本，支持5.6.1、gradle 6各版本。暂不支持gradle7。如果您选择了maven项目，系统会自动忽略此选项
 gradleVersion=6.3
 ```
 
@@ -87,7 +89,7 @@ bash run.sh
 ├─run.bat
 └─demo
 ```
-其中生成项目的具体内容如下：
+其中生成项目的具体内容如下（以gradle项目为例）
 
 ```
 .
@@ -137,13 +139,15 @@ bash run.sh
             │           └── Demos.java
             └── org.example.demo
 ```
-
 其中：
 - config目录包含Bean配置类
 - service目录中包含了智能合约访问的Service类，一个类对应一个合约。
 - bo目录包含了合约函数输入参数的封装POJO类。
 - src/main/resource/conf目录用于存放证书信息
 - Demos.java包含了私钥生成、部署合约等示例代码
+
+如果您生成了maven项目，则不会有gradle相关内容，而会包含pom、mvnw、mvnw.cmd等文件。
+
 
 ## DAPP开发
 这里介绍DAPP开发过程，以前面生成的demo项目工程为例。
@@ -218,12 +222,19 @@ public class HelloController {
 ```
 
 ### 运行jar包
+如果您生成的是gradle项目，则执行：
 ```
 cd demo
 gradle bootJar
 cd dist
 ```
-会在dist目录生成demo-exec.jar，可执行此jar包：
+如果您生成的是maven项目，则执行：
+```
+cd demo
+mvn package
+cd target
+```
+会生成demo-exec.jar，可执行此jar包：
 ```
 java -jar demo-exec.jar
 ```
@@ -251,3 +262,5 @@ gradle solc
 ```
 
 新的abi、bin会被刷新到src/main/resources目录下，但相关Service类和BO类并不会被重新生成，需要用户自行修改。
+
+注意，由于目前没有maven编译插件，因此maven工程暂不支持这一步。
