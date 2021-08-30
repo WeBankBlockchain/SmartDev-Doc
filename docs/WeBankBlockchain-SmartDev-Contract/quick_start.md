@@ -10,10 +10,10 @@
 
 ## 如何获取
 
-通过github下载[源码](https://github.com/WeBankBlockchain/SmartDev-Contract/releases/download/V1.1.0-beta/WeBankBlockchain-SmartDev-Contract.V1.1.0-beta.zip)：
+通过github下载[源码](https://github.com/WeBankBlockchain/SmartDev-Contract/releases/download/V1.2.0-alpha/WeBankBlockchain-SmartDev-Contract.V1.2.0-alpha.zip)：
 
 ```
-curl -LO https://github.com/WeBankBlockchain/SmartDev-Contract/releases/download/V1.1.0-beta/WeBankBlockchain-SmartDev-Contract.V1.1.0-beta.zip
+curl -LO https://github.com/WeBankBlockchain/SmartDev-Contract/releases/download/V1.2.0-alpha/WeBankBlockchain-SmartDev-Contract.V1.2.0-alpha.zip
 ```
 
 
