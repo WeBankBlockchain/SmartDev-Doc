@@ -6,7 +6,7 @@ LibLinkedList提供了双向链表操作，包括链表更新、查询、迭代�
 
 首先需要通过import引入LibLinkedList类库，然后通过"."进行方法调用，如下为添加元素的例子：
 ```
-pragma solidity ^0.4.25;
+pragma solidity >=0.4.24 <0.6.11;
 import "./LibLinkedList.sol";
 
 contract Test {
@@ -74,7 +74,7 @@ addNode函数用于添加一个元素，时间复杂度O(1)
 #### 实例
 
 ```
-pragma solidity ^0.4.25;
+pragma solidity >=0.4.24 <0.6.11;
 import "./LibLinkedList.sol";
 
 contract Test {
@@ -108,7 +108,7 @@ removeNode函数用于从链表中删除一个元素,时间复杂度O（1）
 #### 实例
 
 ```
-pragma solidity ^0.4.25;
+pragma solidity >=0.4.24 <0.6.11;
 import "./LibLinkedList.sol";
 
 contract Test {
@@ -143,7 +143,7 @@ getPrev用于取得一个元素的前一个元素。时间复杂度O（1）
 #### 实例
 
 ```
-pragma solidity ^0.4.25;
+pragma solidity >=0.4.24 <0.6.11;
 import "./LibLinkedList.sol";
 
 contract Test {
@@ -178,7 +178,7 @@ getNext用于取得一个元素的下一个函数。时间复杂度O（1）
 #### 实例
 
 ```
-pragma solidity ^0.4.25;
+pragma solidity >=0.4.24 <0.6.11;
 import "./LibLinkedList.sol";
 
 contract Test {
@@ -212,7 +212,7 @@ getTail用于取得链表元素的尾部元素。时间复杂度O（1）
 #### 实例
 
 ```
-pragma solidity ^0.4.25;
+pragma solidity >=0.4.24 <0.6.11;
 import "./LibLinkedList.sol";
 
 contract Test {
@@ -246,7 +246,7 @@ getHead用于取得链表元素的头部元素。时间复杂度O（1）
 #### 实例
 
 ```
-pragma solidity ^0.4.25;
+pragma solidity >=0.4.24 <0.6.11;
 import "./LibLinkedList.sol";
 
 contract Test {
@@ -272,7 +272,7 @@ contract Test {
 #### 实例
 
 ```
-pragma solidity ^0.4.25;
+pragma solidity >=0.4.24 <0.6.11;
 import "./LibLinkedList.sol";
 
 contract Test {

@@ -7,7 +7,7 @@ LibBytesMap提供了基于bytes的可迭代、可查询的映射.
 首先需要通过import引入LibBytesMap类库，然后通过"."进行方法调用，如下为调用例子：
 
 ```
-pragma solidity ^0.4.25;
+pragma solidity >=0.4.24 <0.6.11;
 
 import "./LibBytesMap.sol";
 
@@ -69,7 +69,7 @@ contract Test {
 #### 实例
 
 ```
-pragma solidity ^0.4.25;
+pragma solidity >=0.4.24 <0.6.11;
 
 import "./LibBytesMap.sol";
 
@@ -94,7 +94,8 @@ contract Test {
 #### 实例
 
 ```
-pragma solidity ^0.4.25;
+pragma solidity >=0.4.24 <0.6.11;
+
 import "./LibBytesMap.sol";
 
 contract Test {
@@ -105,16 +106,11 @@ contract Test {
     
     
     event Log(bytes key, uint256 index);
+    event Debug(uint256 index, bool can);
     function f() public {
-        string memory k1 = "k1";
-        string memory k2 = "k2";
-        string memory k3 = "k3";
-        string memory v1 = "v1";
-        string memory v2 = "v2";
-        string memory v3 = "v3";
-        map.put(bytes(k1),bytes(v1));
-        map.put(bytes(k2),bytes(v2));
-        map.put(bytes(k3),bytes(v3));
+        map.put(bytes("k1"),bytes("v1"));
+        map.put(bytes("k2"),bytes("v2"));
+        map.put(bytes("k3"),bytes("v3"));
     
         uint256 i = map.iterate_start();
         

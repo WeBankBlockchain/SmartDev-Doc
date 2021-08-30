@@ -7,7 +7,7 @@ LibAddressSet 提供了存储Address类型的Set数据结构，支持包括add, 
 首先需要通过import引入LibAddressSet类库，然后通过"."进行方法调用，如下为调用LibAddressSet方法的例子：
 
 ```
-pragma solidity ^0.4.25;
+pragma solidity >=0.4.24 <0.6.11;
 
 import "./LibAddressSet.sol";
 
@@ -54,7 +54,7 @@ contract Test {
 #### 实例
 
 ```
-pragma solidity ^0.4.25;
+pragma solidity >=0.4.24 <0.6.11;
 
 import "./LibAddressSet.sol";
 
@@ -88,7 +88,7 @@ contract Test {
 #### 实例
 
 ```
-pragma solidity ^0.4.25;
+pragma solidity >=0.4.24 <0.6.11;
 
 import "./LibAddressSet.sol";
 
@@ -121,7 +121,7 @@ contract Test {
 #### 实例
 
 ```
-pragma solidity ^0.4.25;
+pragma solidity >=0.4.24 <0.6.11;
 
 import "./LibAddressSet.sol";
 
@@ -172,7 +172,7 @@ contract Test {
 #### 实例
 
 ```
-pragma solidity ^0.4.25;
+pragma solidity >=0.4.24 <0.6.11;
 
 import "./LibAddressSet.sol";
 
@@ -205,7 +205,7 @@ contract Test {
 #### 实例
 
 ```
-pragma solidity ^0.4.25;
+pragma solidity >=0.4.24 <0.6.11;
 
 import "./LibAddressSet.sol";
 
