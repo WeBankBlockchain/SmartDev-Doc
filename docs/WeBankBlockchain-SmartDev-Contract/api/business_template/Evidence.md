@@ -13,9 +13,9 @@
 
 ## 接口
 
-提供了三个合约：Evidence合约，EvidenceRepository合约，RequestRepository合约，Authentication合约。其中Evidence合约是对外服务合约，其余合约是辅助合约，用于数据和逻辑分离。
+提供了三个合约：Evidence合约，EvidenceRepository合约，RequestRepository合约，Authentication合约。其中RequestRepository合约是对外服务合约，其余合约是辅助合约，用于数据和逻辑分离。
 
-Evidence合约：对外服务的唯一接口。包含：
+RequestRepository合约：对外服务的唯一接口。包含：
     - createSaveRequest(byte32 hash, bytes ext): 存证方提交存证请求。hash是存证数据摘要，ext可选地存放说明信息
     - getRequestData(bytes32 hash): 审核方查看存证请求，以便审核。包括ext等信息
     - voteSaveRequest(bytes32 hash)：审核方批准存证请求。投票全部通过后，
