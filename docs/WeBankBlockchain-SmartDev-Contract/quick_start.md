@@ -91,7 +91,7 @@ unzip SmartDev-Contract*.zip
 
 ### 上层业务层
 
-| 库 | 功能 | 说明 | API |
+| 库 | 功能 | 说明 | 文档 |
 | --- | --- | --- | --- |
 |Evidence|存证|存证场景相关操作，上传、审批、修改、删除等|[API](./api/business_template/Evidence.html)|
 |evidence_plus|存证|存证合约 Plus 版本|[API](./api/business_template/evidence_plus.html)|
@@ -102,7 +102,7 @@ unzip SmartDev-Contract*.zip
 |bill|金融票据|可以发布票据、对票据进行背书、验证背书、拒绝背书等操作|[API](./api/business_template/bill.html)|
 |CarbonFrugalEvidence|共享充电积分能量存证合约|积分场景相关操作，发行、转移等|[API](./api/business_template/CarbonFrugalEvidence.html)|
 |Traceability|商品溯源|实现商品溯源的案例|[API](./api/business_template/Traceability.html)|
-|BookShares|股权薄记系统|实现公司股权薄记的案例|[API](./api/business_template/BookShares.html)|
+|BookShares|股权簿记系统|实现公司股权簿记的案例|[API](./api/business_template/BookShares.html)|
 |Chattel|金融动产|实现金融动产案例|[API](./api/business_template/chattel.html)|
 |SharedBikes|共享单车|实现共享单车的案例|[API](./api/business_template/shared_bike.html)|
 |GovOffice|政府办公|实现政府办公的案例|[API](./api/business_template/gov_office.html)|
