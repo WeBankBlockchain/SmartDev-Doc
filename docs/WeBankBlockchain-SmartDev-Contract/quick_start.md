@@ -87,6 +87,7 @@ unzip SmartDev-Contract*.zip
 |RoleOperation|角色操作|RoleOperation| [API](./api/common_tools/RoleOperation.html)|
 |whiteList|白名单操作|白名单管理的实现| [API](./api/common_tools/white_list_manage.html)|
 |MathAdvance|数学运算|开方，平方，对数，幂| [API](./api/common_tools/math_advance.html)|
+|LibAscii|asc码转换|asc码转换| [API](./api/common_tools/LibAscii.html)|
 
 
 ### 上层业务层
