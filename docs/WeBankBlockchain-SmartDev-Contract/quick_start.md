@@ -107,6 +107,8 @@ unzip SmartDev-Contract*.zip
 |SharedBikes|共享单车|实现共享单车的案例|[API](./api/business_template/shared_bike.html)|
 |GovOffice|政府办公|实现政府办公的案例|[API](./api/business_template/gov_office.html)|
 
-### 智能合约文章
+### 合约杂谈
 
-|SmartBasics|智能合约入门|智能合约入门|[API](./api/miscs/tutorial/Solidity-basic.md)|
+| 文章 | 说明 | API |作者|
+|SmartBasics|智能合约入门|[API](./api/miscs/tutorial/Solidity-basic.md)|yekai|
+|ContractTips|合约开发思想|[API](./api/miscs/tutorial/Contract-tips.md)|江会文|
