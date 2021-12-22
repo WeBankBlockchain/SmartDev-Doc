@@ -80,13 +80,13 @@ unzip SmartDev-Contract*.zip
 
 | 库 | 功能 | 说明 | API |
 | --- | --- | --- | --- |
-|DateTimeContract|时间戳解析|基于时间戳计算当前的日期| [API](./api/default/common_tools/DateTimeContract.html)|
-|DGHV|同态加密|一种基于智能合约的全同态加密方法| [API](./api/default/common_tools/DGHV.html)|
-|FiatShamirZK|同态加密|一种零知识证明协议方法| [API](./api/default/common_tools/FiatShamirZK.html)|
-|RBAC|基于角色的权限管理|RBAC| [API](./api/default/common_tools/RBAC.html)|
-|RoleOperation|角色操作|RoleOperation| [API](./api/default/common_tools/RoleOperation.html)|
-|whiteList|白名单操作|白名单管理的实现| [API](./api/default/common_tools/white_list_manage.html)|
-|MathAdvance|数学运算|开方，平方等| [API](./api/default/math_advance.html)|
+|DateTimeContract|时间戳解析|基于时间戳计算当前的日期| [API](./api/common_tools/DateTimeContract.html)|
+|DGHV|同态加密|一种基于智能合约的全同态加密方法| [API](./api/common_tools/DGHV.html)|
+|FiatShamirZK|同态加密|一种零知识证明协议方法| [API](./api/common_tools/FiatShamirZK.html)|
+|RBAC|基于角色的权限管理|RBAC| [API](./api/common_tools/RBAC.html)|
+|RoleOperation|角色操作|RoleOperation| [API](./api/common_tools/RoleOperation.html)|
+|whiteList|白名单操作|白名单管理的实现| [API](./api/common_tools/white_list_manage.html)|
+|MathAdvance|数学运算|开方，平方，对数，幂| [API](./api/common_tools/math_advance.html)|
 
 
 ### 上层业务层
