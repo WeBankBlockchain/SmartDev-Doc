@@ -2,7 +2,7 @@
 平方、开方、对数、幂
 
 ## 使用示例
-
+```
 pragma solidity ^0.4.25;
 
 import "./MathAdvance.sol";
@@ -29,3 +29,4 @@ contract MathAdvanceTest{
         return MathAdvance.exp(m, n); //m = +-2, n =2, return 4; m=-2, n=1, return -2
     }
 }
+```
