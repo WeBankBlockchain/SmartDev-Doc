@@ -21,7 +21,7 @@
 
 为了支持智能合约的运行，以太坊提供了EVM（Ether Virtual Machine，以太坊虚拟机），使用特定的Solc编译器可以将智能合约代码编译为EVM机器码，这些机器码可以在EVM中运行。如下图所示。
 
-![image-20211209152955771](./assets/1-evm-run.png)
+![](./assets/1-evm-run.png)
 
 上面简单的介绍了智能合约的运行过程，通过这些介绍，我们可以得出一个结论，Solidity智能合约若想运行，需要有Solc编译器和EVM，EVM依赖于区块链节点，只要是支持EVM的区块链系统都可以作为开发节点使用，例如FISCO-BCOS或Geth；至于编译器的问题，建议使用内嵌编译器的在线IDE环境，例如WeBase-Front（微众银行提供的FISCO-BCOS节点前置服务）或Remix。这两款IDE都内嵌了EOA（以太坊外部账户），方便对智能合约的执行进行签名。
 两个IDE的安装地址：

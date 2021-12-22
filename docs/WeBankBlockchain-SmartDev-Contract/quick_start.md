@@ -111,5 +111,5 @@ unzip SmartDev-Contract*.zip
 
 | 文章 | 说明 | 链接 |作者|
 | --- | --- | --- | --- |
-|SmartBasics|智能合约入门|[链接](./api/miscs/tutorial/Solidity-basic.html)|yekai|
-|ContractTips|合约开发杂谈|[链接](./api/miscs/tutorial/Contract-tips.html)|江会文|
+|SmartBasics|智能合约入门|[链接](https://github.com/WeBankBlockchain/SmartDev-Contract/blob/master/docs/miscs/tutorial/Solidity-basic.md)|yekai|
+|ContractTips|合约开发杂谈|[链接](https://github.com/WeBankBlockchain/SmartDev-Contract/blob/master/docs/miscs/tutorial/Contract-tips.md)|江会文|
