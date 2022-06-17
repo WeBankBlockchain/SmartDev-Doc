@@ -75,21 +75,24 @@ unzip SmartDev-Contract*.zip
 |proxy|代理模式|代理执行即代理模式的实现| [API](./api/default/proxy/proxy.html)|
 |internalFunction|内置相关的函数|包括block,tx相关等| [API](./api/default/internalFunction.html)|
 
+
 ### 常用工具层
 
 | 库 | 功能 | 说明 | API |
 | --- | --- | --- | --- |
-|DateTimeContract|时间戳解析|基于时间戳计算当前的日期| [API](./api/default/common_tools/DateTimeContract.html)|
-|DGHV|同态加密|一种基于智能合约的全同态加密方法| [API](./api/default/common_tools/DGHV.html)|
-|FiatShamirZK|同态加密|一种零知识证明协议方法| [API](./api/default/common_tools/FiatShamirZK.html)|
-|RBAC|基于角色的权限管理|RBAC| [API](./api/default/common_tools/RBAC.html)|
-|RoleOperation|角色操作|RoleOperation| [API](./api/default/common_tools/RoleOperation.html)|
-|whiteList|白名单操作|白名单管理的实现| [API](./api/default/common_tools/white_list_manage.html)|
+|DateTimeContract|时间戳解析|基于时间戳计算当前的日期| [API](./api/common_tools/DateTimeContract.html)|
+|DGHV|同态加密|一种基于智能合约的全同态加密方法| [API](./api/common_tools/DGHV.html)|
+|FiatShamirZK|同态加密|一种零知识证明协议方法| [API](./api/common_tools/FiatShamirZK.html)|
+|RBAC|基于角色的权限管理|RBAC| [API](./api/common_tools/RBAC.html)|
+|RoleOperation|角色操作|RoleOperation| [API](./api/common_tools/RoleOperation.html)|
+|whiteList|白名单操作|白名单管理的实现| [API](./api/common_tools/white_list_manage.html)|
+|MathAdvance|数学运算|开方，平方，对数，幂| [API](./api/common_tools/math_advance.html)|
+|LibAscii|asc码转换|asc码转换| [API](./api/common_tools/LibAscii.html)|
 
 
 ### 上层业务层
 
-| 库 | 功能 | 说明 | API |
+| 库 | 功能 | 说明 | 文档 |
 | --- | --- | --- | --- |
 |Evidence|存证|存证场景相关操作，上传、审批、修改、删除等|[API](./api/business_template/Evidence.html)|
 |evidence_plus|存证|存证合约 Plus 版本|[API](./api/business_template/evidence_plus.html)|
@@ -100,5 +103,14 @@ unzip SmartDev-Contract*.zip
 |bill|金融票据|可以发布票据、对票据进行背书、验证背书、拒绝背书等操作|[API](./api/business_template/bill.html)|
 |CarbonFrugalEvidence|共享充电积分能量存证合约|积分场景相关操作，发行、转移等|[API](./api/business_template/CarbonFrugalEvidence.html)|
 |Traceability|商品溯源|实现商品溯源的案例|[API](./api/business_template/Traceability.html)|
+|BookShares|股权簿记系统|实现公司股权簿记的案例|[API](./api/business_template/BookShares.html)|
+|Chattel|金融动产|实现金融动产案例|[API](./api/business_template/chattel.html)|
+|SharedBikes|共享单车|实现共享单车的案例|[API](./api/business_template/shared_bike.html)|
+|GovOffice|政府办公|实现政府办公的案例|[API](./api/business_template/gov_office.html)|
 
+### 合约杂谈
 
+| 文章 | 说明 | 链接 |作者|
+| --- | --- | --- | --- |
+|SmartBasics|智能合约入门|[链接](https://github.com/WeBankBlockchain/SmartDev-Contract/blob/master/docs/miscs/tutorial/Solidity-basic.md)|yekai|
+|ContractTips|合约开发杂谈|[链接](https://github.com/WeBankBlockchain/SmartDev-Contract/blob/master/docs/miscs/tutorial/Contract-tips.md)|江会文|
