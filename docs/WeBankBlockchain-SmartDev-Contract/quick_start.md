@@ -1,10 +1,5 @@
 # 快速开始
 
-```eval_rst
-.. important::
-    FISCO-BCOS 2.0与3.0对比、JDK版本、WeBankBlockChain-SmartDev及其他子系统的 `兼容版本说明 <https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/compatibility.html>`_
-```
-
 ## 环境要求
 
 | 依赖软件 | 说明 |备注|
@@ -12,6 +7,10 @@
 | Solidity | 0.4.25 | |
 | Git | 下载需要使用Git | |
 
+```eval_rst
+.. important::
+    FISCO-BCOS 2.0与3.0对比、JDK版本、WeBankBlockChain-SmartDev及其他子系统的 `兼容版本说明 <https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/compatibility.html>`_
+```
 
 ## 如何获取
 
