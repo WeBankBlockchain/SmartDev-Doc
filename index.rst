@@ -27,6 +27,8 @@ WeBankBlockchain-SmartDev 技术文档
     - **SmartDev-Scaffold 应用开发脚手架** 
     基于配置的智能合约文件，自动生成应用项目的脚手架代码，包含了智能合约所对应的实体类、服务类等内容，帮助用户只需要修改和编写较少量的代码，即可实现一个应用，大大简化了智能合约开发。 
 
+.. important::
+    FISCO-BCOS 2.0与3.0对比、JDK版本、WeBankBlockChain-SmartDev及其他子系统的 `兼容版本说明 <https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/compatibility.html>`_
 
 .. toctree::
    :hidden:

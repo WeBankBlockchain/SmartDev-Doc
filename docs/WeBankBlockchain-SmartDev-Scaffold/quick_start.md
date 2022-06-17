@@ -12,6 +12,11 @@
 | Gradle | 大于6 小于7|使用gradle7会报错 |
 | Maven | |如果要生成maven工程则需要 |
 
+```eval_rst
+.. important::
+    FISCO-BCOS 2.0与3.0对比、JDK版本、WeBankBlockChain-SmartDev及其他子系统的 `兼容版本说明 <https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/compatibility.html>`_
+```
+
 ## 下载脚手架
 从github下载[脚手架](https://github.com/WeBankBlockchain/SmartDev-Scaffold/releases/download/V1.0.1/SmartDev-Scaffold-V1_0_1.zip)：
 
