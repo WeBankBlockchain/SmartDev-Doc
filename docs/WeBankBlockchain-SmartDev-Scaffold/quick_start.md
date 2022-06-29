@@ -6,8 +6,8 @@
 
 | 依赖软件 | 说明 |备注|
 | --- | --- | --- |
-| Java |>= JDK[1.8] | |
-| Solidity | 0.4.25 | |
+| Java |>= JDK[1.8] | 64bit|
+| Solidity |0.4.25.1 0.5.2.0 0.6.10.0  0.8.11.0 | |
 | Git | 下载安装包需要使用Git | |
 | Gradle | 大于6 小于7|使用gradle7会报错 |
 | Maven | |如果要生成maven工程则需要 |
@@ -66,7 +66,7 @@ artifact=demo
 group=org.example
 ### 所支持的合约列表，默认为空表示选择所有合约
 selector=
-### solidity编译器版本，可选0.4.25.1, 0.5.2.0, 0.6.10.0三种
+### solidity编译器版本，可选0.4.25.1, 0.5.2.0, 0.6.10.0, 0.8.11.0
 compiler=0.4.25.1
 ### 工程生成类型，可以设置为gradle或maven
 type=gradle
