@@ -5,7 +5,7 @@
 | 依赖软件 | 说明 |备注|
 | --- | --- | --- |
 | Java |>= JDK[1.8] | |
-| Solidity | 0.4.25 | |
+| Solidity | >= 0.4.25 | |
 | Git | 下载安装包需要使用Git | |
 | Gradle | >=6.0.1| |
 
@@ -33,10 +33,12 @@ buildscript {
         mavenLocal()
     }
     dependencies {
-        classpath 'com.webank:solc-gradle-plugin:1.0.1'
-        //默认编译0.4.25版本，如果想编译0.6.10.0版本，请添加下述依赖
+        classpath 'com.webank:solc-gradle-plugin:1.0.2-SNAPSHOT'
+        //默认编译0.8.11.0版本，如果想编译0.4.25版本，请添加下述依赖
+        //classpath 'org.fisco-bcos:solcJ:0.4.25.0'
+        //默认编译0.8.11.0版本，如果想编译0.6.10.0版本，请添加下述依赖
         //classpath 'org.fisco-bcos:solcJ:0.6.10.0'
-        //默认编译0.4.25版本，如果想编译0.5.2.0版本，请添加下述依赖
+        //默认编译0.8.11.0版本，如果想编译0.5.2.0版本，请添加下述依赖
         //classpath 'org.fisco-bcos:solcJ:0.5.2.0'
     }
 }
