@@ -15,19 +15,21 @@
 ```eval_rst
 .. important::
     FISCO-BCOS 2.0与3.0对比、JDK版本、WeBankBlockChain-SmartDev及其他子系统的 `兼容版本说明 <https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/compatibility.html>`_
+
 ```
 
 ## 下载脚手架
-从github下载[脚手架](https://github.com/WeBankBlockchain/SmartDev-Scaffold/releases/download/V1.0.1/SmartDev-Scaffold-V1_0_1.zip)：
+从github获取脚手架:
 
 ```
-curl -LO https://github.com/WeBankBlockchain/SmartDev-Scaffold/releases/download/V1.0.1/SmartDev-Scaffold-V1_0_1.zip
+git clone https://github.com/WeBankBlockchain/SmartDev-Scaffold.git
 ```
 
-下载成功后，手动或用命令行解压压缩包：
+切换到V3分支，以便适配最新的fisco bcos：
 ```
-unzip SmartDev-Scaffold*.zip
+git checkout origin/V3
 ```
+
 
 ```eval_rst
 .. note::
@@ -67,7 +69,7 @@ group=org.example
 ### 所支持的合约列表，默认为空表示选择所有合约
 selector=
 ### solidity编译器版本，可选0.4.25.1, 0.5.2.0, 0.6.10.0, 0.8.11.0
-compiler=0.4.25.1
+compiler=0.8.11.0
 ### 工程生成类型，可以设置为gradle或maven
 type=gradle
 ### gradle版本，支持5.6.1、gradle 6各版本。暂不支持gradle7。如果您选择了maven项目，系统会自动忽略此选项
